@@ -5,10 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OkurleigaHF"
         mc:Ignorable="d"
-        Title="Property" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Property" Height="427.999" Width="808" Loaded="Window_Loaded">
     <Grid >
-        <Button Content="Register New Property" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="161" Height="37"/>
-        <DataGrid HorizontalAlignment="Left" Height="237" Margin="33,121,0,0" VerticalAlignment="Top" Width="727"/>
+        <Button Content="Register New Property" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="244" Height="37"/>
+        <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False" Height="244" Margin="33,121,29.333,0" VerticalAlignment="Top" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Address" Binding="{Binding Path=Address}"/>
+                <DataGridTextColumn Header="Zip Code" Binding="{Binding Path=ZipCode}"/>
+                <DataGridTextColumn Header="Property Size" Binding="{Binding Path=PropertySize}"/>
+                <DataGridTextColumn Header="Monthly Cost" Binding="{Binding Path=RentCost}"/>
+                <DataGridTextColumn Header="Available" Binding="{Binding Path=IsAvailable}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
 
     </Grid>
 </Window>

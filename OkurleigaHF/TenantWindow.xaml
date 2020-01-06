@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OkurleigaHF"
         mc:Ignorable="d"
-        Title="TenantWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Tenant" Height="427.999" Width="808" Loaded="Window_Loaded">
+    <Grid >
+        <Button Content="Register New Tenant" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="244" Height="37"/>
+        <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False" Height="244" Margin="33,121,29.333,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+
     </Grid>
 </Window>

@@ -1,5 +1,9 @@
-﻿using System;
+﻿using OkurleigaHF.EF;
+using OkurleigaHF.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +23,22 @@ namespace OkurleigaHF
     /// </summary>
     public partial class TenantWindow : Window
     {
+        public ObservableCollection<Tenant> Tenants { get; set; }
+
         public TenantWindow()
         {
             InitializeComponent();
+
+            Tenants = new ObservableCollection<Tenant>();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            SharedContext.DBContext.Properties.Load();
+
+            Tenants = SharedContext.DBContext.Tenants.Local;
+
+            this.DataContext = Tenants;
         }
     }
 }

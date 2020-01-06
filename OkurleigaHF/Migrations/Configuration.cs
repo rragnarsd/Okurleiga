@@ -9,6 +9,7 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(OkurleigaHF.EF.OkDBContext context)
@@ -58,13 +59,33 @@
                 RentCost = 90000
             };
 
+            Property p6 = new Property()
+            {
+                ZipCode = "860",
+                Address = "Austurvegur 4",
+                PropertySize = 200,
+                RentCost = 60000,
+                IsAvailable = true
+            };
+
+            Property p7 = new Property()
+            {
+                ZipCode = "210",
+                Address = "Garðatorg 7",
+                PropertySize = 75,
+                RentCost = 190000,
+                IsAvailable = true
+            };
+
             context.Properties.AddOrUpdate(
                 a => a.Address,
                 p1,
                 p2,
                 p3,
                 p4,
-                p5
+                p5,
+                p6,
+                p7
                 );
 
             Tenant t1 = new Tenant()

@@ -27,3 +27,4 @@ C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\obj\Debug\PropertyWindow.g
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\obj\Debug\PropertyWindow.baml
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\obj\Debug\TenantWindow.g.cs
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\obj\Debug\TenantWindow.baml
+C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\obj\Debug\App.baml
