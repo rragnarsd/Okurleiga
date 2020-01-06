@@ -23,3 +23,7 @@ C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\MaterialDesignTh
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\MaterialDesignColors.pdb
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\obj\Debug\PropertyWindow.g.cs
+C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\obj\Debug\PropertyWindow.baml
+C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\obj\Debug\TenantWindow.g.cs
+C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\obj\Debug\TenantWindow.baml

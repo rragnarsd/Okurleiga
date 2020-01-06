@@ -1,7 +1,9 @@
-﻿using OkurleigaHF.Models;
+﻿using OkurleigaHF.EF;
+using OkurleigaHF.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,18 +24,24 @@ namespace OkurleigaHF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Property> Properties { get; set; }
-
         public MainWindow()
         {
             InitializeComponent();
 
-            
         }
 
         private void btnProperties_Click(object sender, RoutedEventArgs e)
         {
-
+            PropertyWindow win = new PropertyWindow();
+            win.ShowDialog();
         }
+
+        private void btnTenants_Click(object sender, RoutedEventArgs e)
+        {
+            TenantWindow win = new TenantWindow();
+            win.ShowDialog();
+        }
+
+        
     }
 }
