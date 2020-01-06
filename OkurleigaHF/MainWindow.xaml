@@ -1,0 +1,33 @@
+﻿<Window
+    x:Class="OkurleigaHF.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:OkurleigaHF"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Okurleiga hf"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <Button
+            x:Name="btnProperties"
+            Width="213"
+            Height="59"
+            Margin="113,168,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="btnProperties_Click"
+            Content="Property" />
+        <Button
+            x:Name="btnTenants"
+            Width="213"
+            Height="59"
+            Margin="473,168,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Tenant" />
+
+    </Grid>
+</Window>
