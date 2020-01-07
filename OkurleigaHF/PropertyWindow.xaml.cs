@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using OkurleigaHF.EF;
 using System.Data.Entity;
+using OkurleigaHF.Windows;
 
 namespace OkurleigaHF
 {
@@ -43,7 +44,9 @@ namespace OkurleigaHF
 
         private void btnNewProp_Click(object sender, RoutedEventArgs e)
         {
+            NewPropertyWindow win = new NewPropertyWindow();
 
+            win.ShowDialog();
         }
     }
 }

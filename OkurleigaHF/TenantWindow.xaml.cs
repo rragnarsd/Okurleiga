@@ -1,5 +1,6 @@
 ﻿using OkurleigaHF.EF;
 using OkurleigaHF.Models;
+using OkurleigaHF.Windows;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -39,6 +40,13 @@ namespace OkurleigaHF
             Tenants = SharedContext.DBContext.Tenants.Local;
 
             this.DataContext = Tenants;
+        }
+
+        private void btnNewTenant_Click(object sender, RoutedEventArgs e)
+        {
+            NewTenantWindow win = new NewTenantWindow();
+
+            win.ShowDialog();
         }
     }
 }

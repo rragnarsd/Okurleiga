@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,13 @@ namespace OkurleigaHF.Models
 {
     public class Property
     {
+
+
+
         public int Id { get; set; }
         public string Address { get; set; }
         public string ZipCode { get; set; }
+        public int Bedrooms { get; set; }
 
         [NotMapped]
         public string AddressZipCode
@@ -29,6 +34,6 @@ namespace OkurleigaHF.Models
         public DateTime? DateRented { get; set; }
         public DateTime? DateReturned { get; set; }
 
-
+        
     }
 }

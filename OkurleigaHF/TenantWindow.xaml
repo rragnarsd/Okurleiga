@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Tenant" Height="427.999" Width="808" Loaded="Window_Loaded">
     <Grid >
-        <Button Content="Nýskrá viðskiptavin" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="244" Height="37"/>
+        <Button x:Name="btnNewTenant" Content="Nýskrá leigjanda" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="244" Height="37" Click="btnNewTenant_Click"/>
         <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False" Height="244" Margin="33,121,29.333,0" VerticalAlignment="Top" Grid.RowSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nafn" Binding="{Binding Path=FullName}"/>
