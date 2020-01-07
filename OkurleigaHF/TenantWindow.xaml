@@ -7,8 +7,15 @@
         mc:Ignorable="d"
         Title="Tenant" Height="427.999" Width="808" Loaded="Window_Loaded">
     <Grid >
-        <Button Content="Register New Tenant" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="244" Height="37"/>
-        <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False" Height="244" Margin="33,121,29.333,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <Button Content="Nýskrá viðskiptavin" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="244" Height="37"/>
+        <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False" Height="244" Margin="33,121,29.333,0" VerticalAlignment="Top" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nafn" Binding="{Binding Path=FullName}"/>
+                <DataGridTextColumn Header="Símanúmer" Binding="{Binding Path=Phone}"/>
+                <DataGridTextColumn Header="Netfang" Binding="{Binding Path=Email}"/>
+                <DataGridTextColumn Header="Íbúð í útláni" Binding="{Binding Path=PropertyForRent.AddressZipCode}"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>

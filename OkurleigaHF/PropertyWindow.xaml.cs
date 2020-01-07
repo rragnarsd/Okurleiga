@@ -40,5 +40,10 @@ namespace OkurleigaHF
 
             this.DataContext = Properties;
         }
+
+        private void btnNewProp_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

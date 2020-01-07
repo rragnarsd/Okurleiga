@@ -34,7 +34,7 @@ namespace OkurleigaHF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            SharedContext.DBContext.Properties.Load();
+            SharedContext.DBContext.Tenants.Include(x => x.PropertyForRent).Load();
 
             Tenants = SharedContext.DBContext.Tenants.Local;
 
