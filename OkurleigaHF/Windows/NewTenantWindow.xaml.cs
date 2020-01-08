@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OkurleigaHF.EF;
+using OkurleigaHF.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,18 @@ namespace OkurleigaHF.Windows
     /// </summary>
     public partial class NewTenantWindow : Window
     {
+        public Tenant Tenant { get; set; }
+
         public NewTenantWindow()
         {
             InitializeComponent();
+
+            Tenant = new Tenant();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.DataContext = Tenant;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -31,7 +42,10 @@ namespace OkurleigaHF.Windows
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            SharedContext.DBContext.Tenants.Add(Tenant);
+            SharedContext.DBContext.SaveChanges();
 
+            this.Close();
         }
     }
 }

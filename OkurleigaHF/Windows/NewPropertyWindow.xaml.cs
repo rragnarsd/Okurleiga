@@ -1,4 +1,6 @@
-﻿using OkurleigaHF.Models;
+﻿using OkurleigaHF.EF;
+using OkurleigaHF.Models;
+using System;
 using System.Windows;
 
 namespace OkurleigaHF.Windows
@@ -31,7 +33,13 @@ namespace OkurleigaHF.Windows
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            Property.ZipCode = cbZipCode.SelectedIndex.ToString();
+            Property.Bedrooms = cbBedrooms.SelectedIndex;
 
+            SharedContext.DBContext.Properties.Add(Property);
+            SharedContext.DBContext.SaveChanges();
+
+            this.Close();
         }
     }
 }

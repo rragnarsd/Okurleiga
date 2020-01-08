@@ -1,82 +1,234 @@
-﻿<Window x:Class="OkurleigaHF.Windows.NewPropertyWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:OkurleigaHF.Windows"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:models="clr-namespace:OkurleigaHF.Models"
-        mc:Ignorable="d"
-        Title="Nýskrá leiguhúsnæði" Height="478.333" Width="443.666" Loaded="Window_Loaded">
+﻿<Window
+    x:Class="OkurleigaHF.Windows.NewPropertyWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:OkurleigaHF.Windows"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:OkurleigaHF.Models"
+    Title="Nýskrá leiguhúsnæði"
+    Width="443.666"
+    Height="478.333"
+    Loaded="Window_Loaded"
+    mc:Ignorable="d">
 
     <Grid>
-        <StackPanel Margin="1,61,0.667,349.667" Orientation="Vertical" HorizontalAlignment="Center">
-            <TextBlock TextWrapping="Wrap" Text="Nýskrá leiguhúsnæði" VerticalAlignment="Center" Height="38" FontSize="20" FontWeight="bold" Margin="-61,0,-29,0"/>
+        <StackPanel
+            Width="255"
+            Margin="71,61,110.667,349.667"
+            HorizontalAlignment="Center"
+            Orientation="Vertical">
+            <TextBlock
+                Height="43"
+                Margin="38,0,-128.333,0"
+                VerticalAlignment="Center"
+                FontSize="20"
+                FontWeight="bold"
+                Text="Nýskrá leiguhúsnæði"
+                TextWrapping="Wrap" />
         </StackPanel>
-        <materialDesign:PackIcon Kind="HomeEdit" Margin="32,114,0,0" Height="25" Width="25" />
-        <materialDesign:PackIcon Kind="LocationCity" Height="25" Width="25" Margin="32,150,0,0" RenderTransformOrigin="0.426,0.793" />
-        <materialDesign:PackIcon Kind="BedEmpty" Height="25" Width="25" Margin="32,236,0,0" />
-        <StackPanel Margin="66,109,0,137.667" Orientation="Vertical" HorizontalAlignment="Left" Width="328">
-            <TextBox HorizontalAlignment="Center" Height="34" TextWrapping="Wrap" Text="{Binding Address}" VerticalAlignment="Top" Width="328"/>
-            <ComboBox x:Name="cbZipCode"
-                ItemsSource="{Binding ZipCode}"
-                DisplayMemberPath="ZipCode"
+        <materialDesign:PackIcon
+            Width="25"
+            Height="25"
+            Margin="32,114,0,0"
+            Kind="HomeEdit" />
+        <materialDesign:PackIcon
+            Width="25"
+            Height="25"
+            Margin="32,150,0,0"
+            Kind="LocationCity"
+            RenderTransformOrigin="0.426,0.793" />
+        <materialDesign:PackIcon
+            Width="25"
+            Height="25"
+            Margin="32,236,0,0"
+            Kind="BedEmpty" />
+        <StackPanel
+            Width="328"
+            Margin="66,109,0,137.667"
+            HorizontalAlignment="Left"
+            Orientation="Vertical">
+            <TextBox
+                Width="328"
+                Height="34"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Text="{Binding Address}"
+                TextWrapping="Wrap" />
+            <ComboBox
+                x:Name="cbZipCode"
+                Height="34"
+                Margin="0,0,3,0"
                 materialDesign:HintAssist.Hint="Póstnúmer"
-                IsEditable="True"
-                materialDesign:HintAssist.HintOpacity=".26" Height="34" Margin="0,0,3,0">
-                <ComboBoxItem Content="101"/>
-                <ComboBoxItem Content="102"/>
-                <ComboBoxItem Content="103"/>
-                <ComboBoxItem Content="104"/>
-                <ComboBoxItem Content="105"/>
-                <ComboBoxItem Content="106"/>
-                <ComboBoxItem Content="107"/>
-                <ComboBoxItem Content="108"/>
-                <ComboBoxItem Content="109"/>
-                <ComboBoxItem Content="110"/>
-                <ComboBoxItem Content="111"/>
-                <ComboBoxItem Content="112"/>
-                <ComboBoxItem Content="113"/>
-                <ComboBoxItem Content="116"/>
-                <ComboBoxItem Content="170"/>
-                <ComboBoxItem Content="104"/>
+                materialDesign:HintAssist.HintOpacity=".26"
+                IsEditable="True">
+                <ComboBoxItem Content="101" />
+                <ComboBoxItem Content="102" />
+                <ComboBoxItem Content="103" />
+                <ComboBoxItem Content="104" />
+                <ComboBoxItem Content="105" />
+                <ComboBoxItem Content="106" />
+                <ComboBoxItem Content="107" />
+                <ComboBoxItem Content="108" />
+                <ComboBoxItem Content="109" />
+                <ComboBoxItem Content="110" />
+                <ComboBoxItem Content="111" />
+                <ComboBoxItem Content="112" />
+                <ComboBoxItem Content="113" />
+                <ComboBoxItem Content="116" />
+                <ComboBoxItem Content="170" />
+                <ComboBoxItem Content="200" />
+                <ComboBoxItem Content="201" />
+                <ComboBoxItem Content="203" />
+                <ComboBoxItem Content="206" />
+                <ComboBoxItem Content="210" />
+                <ComboBoxItem Content="220" />
+                <ComboBoxItem Content="221" />
+                <ComboBoxItem Content="225" />
+                <ComboBoxItem Content="230" />
+                <ComboBoxItem Content="235" />
+                <ComboBoxItem Content="240" />
+                <ComboBoxItem Content="245" />
+                <ComboBoxItem Content="250" />
+                <ComboBoxItem Content="260" />
+                <ComboBoxItem Content="270" />
+                <ComboBoxItem Content="276" />
+                <ComboBoxItem Content="300" />
+                <ComboBoxItem Content="310" />
+                <ComboBoxItem Content="320" />
+                <ComboBoxItem Content="340" />
+                <ComboBoxItem Content="345" />
+                <ComboBoxItem Content="350" />
+                <ComboBoxItem Content="355" />
+                <ComboBoxItem Content="356" />
+                <ComboBoxItem Content="360" />
+                <ComboBoxItem Content="371" />
+                <ComboBoxItem Content="380" />
+                <ComboBoxItem Content="400" />
+                <ComboBoxItem Content="410" />
+                <ComboBoxItem Content="415" />
+                <ComboBoxItem Content="420" />
+                <ComboBoxItem Content="425" />
+                <ComboBoxItem Content="430" />
+                <ComboBoxItem Content="450" />
+                <ComboBoxItem Content="451" />
+                <ComboBoxItem Content="460" />
+                <ComboBoxItem Content="465" />
+                <ComboBoxItem Content="470" />
+                <ComboBoxItem Content="510" />
+                <ComboBoxItem Content="520" />
+                <ComboBoxItem Content="524" />
+                <ComboBoxItem Content="530" />
+                <ComboBoxItem Content="540" />
+                <ComboBoxItem Content="545" />
+                <ComboBoxItem Content="550" />
+                <ComboBoxItem Content="560" />
+                <ComboBoxItem Content="565" />
+                <ComboBoxItem Content="570" />
+                <ComboBoxItem Content="580" />
+                <ComboBoxItem Content="600" />
+                <ComboBoxItem Content="610" />
+                <ComboBoxItem Content="620" />
+                <ComboBoxItem Content="625" />
+                <ComboBoxItem Content="630" />
+                <ComboBoxItem Content="640" />
+                <ComboBoxItem Content="645" />
+                <ComboBoxItem Content="650" />
+                <ComboBoxItem Content="660" />
+                <ComboBoxItem Content="670" />
+                <ComboBoxItem Content="675" />
+                <ComboBoxItem Content="680" />
+                <ComboBoxItem Content="685" />
+                <ComboBoxItem Content="690" />
+                <ComboBoxItem Content="700" />
+                <ComboBoxItem Content="710" />
+                <ComboBoxItem Content="715" />
+                <ComboBoxItem Content="720" />
+                <ComboBoxItem Content="730" />
+                <ComboBoxItem Content="740" />
+                <ComboBoxItem Content="750" />
+                <ComboBoxItem Content="755" />
+                <ComboBoxItem Content="760" />
+                <ComboBoxItem Content="765" />
+                <ComboBoxItem Content="780" />
+                <ComboBoxItem Content="785" />
+                <ComboBoxItem Content="800" />
+                <ComboBoxItem Content="810" />
+                <ComboBoxItem Content="815" />
+                <ComboBoxItem Content="816" />
+                <ComboBoxItem Content="820" />
+                <ComboBoxItem Content="825" />
+                <ComboBoxItem Content="840" />
+                <ComboBoxItem Content="845" />
+                <ComboBoxItem Content="850" />
+                <ComboBoxItem Content="860" />
+                <ComboBoxItem Content="870" />
+                <ComboBoxItem Content="880" />
+                <ComboBoxItem Content="900" />
+
+
+
             </ComboBox>
             <TextBox
+                Height="42"
+                Margin="0,0,2,0"
+                VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Stærð"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                VerticalAlignment="Center" Margin="0,0,2,0" Height="42" />
-
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
 
             <ComboBox
                 x:Name="cbBedrooms"
-                ItemsSource="{Binding Bedrooms}"
-                DisplayMemberPath="Bedrooms"
+                Height="43"
+                Margin="0,0,3,0"
                 materialDesign:HintAssist.Hint="Svefnherbergi"
-                IsEditable="True"
-                materialDesign:HintAssist.HintOpacity=".26" Height="43" Margin="0,0,3,0">
-                <ComboBoxItem Content="1"/>
-                <ComboBoxItem Content="2"/>
-                <ComboBoxItem Content="3"/>
-                <ComboBoxItem Content="4"/>
-                <ComboBoxItem Content="5"/>
-                <ComboBoxItem Content="6"/>
-                <ComboBoxItem Content="7"/>
-                <ComboBoxItem Content="8"/>
-                <ComboBoxItem Content="9"/>
-                <ComboBoxItem Content="10"/>
+                materialDesign:HintAssist.HintOpacity=".26"
+                IsEditable="True">
+                <ComboBoxItem Content="1" />
+                <ComboBoxItem Content="2" />
+                <ComboBoxItem Content="3" />
+                <ComboBoxItem Content="4" />
+                <ComboBoxItem Content="5" />
+                <ComboBoxItem Content="6" />
+                <ComboBoxItem Content="7" />
+                <ComboBoxItem Content="8" />
+                <ComboBoxItem Content="9" />
+                <ComboBoxItem Content="10" />
             </ComboBox>
             <TextBox
-                Text="{Binding RentCost}"
+                Height="44"
+                Margin="0,0,1,0"
+                VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Mánaðarleg greiðsla"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                VerticalAlignment="Center" Height="44" Margin="0,0,1,0" />
+                Text="{Binding RentCost}" />
         </StackPanel>
-        <materialDesign:PackIcon Kind="Money" Height="25" Width="25" Margin="32,279,0,0" />
-        <materialDesign:PackIcon Kind="ArrowTopLeftBottomRight" Height="25" Width="25" Margin="32,190,0,0" />
-        <Button x:Name="btnBack" Content="Til baka" HorizontalAlignment="Left" Margin="156,332,0,0" VerticalAlignment="Top" Width="108" Click="btnBack_Click"/>
-        <Button x:Name="btnSave" Content="Vista" Margin="286,332,0,0" VerticalAlignment="Top" Click="btnSave_Click" HorizontalAlignment="Left" Width="108"/>
-
-
+        <materialDesign:PackIcon
+            Width="25"
+            Height="25"
+            Margin="32,279,0,0"
+            Kind="Money" />
+        <materialDesign:PackIcon
+            Width="25"
+            Height="25"
+            Margin="32,190,0,0"
+            Kind="ArrowTopLeftBottomRight" />
+        <Button
+            x:Name="btnBack"
+            Width="108"
+            Margin="156,332,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="btnBack_Click"
+            Content="Til baka" />
+        <Button
+            x:Name="btnSave"
+            Width="108"
+            Margin="286,332,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="btnSave_Click"
+            Content="Vista" />
 
     </Grid>
 </Window>
