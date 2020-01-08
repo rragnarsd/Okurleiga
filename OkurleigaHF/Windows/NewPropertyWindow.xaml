@@ -5,16 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OkurleigaHF.Windows"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:models="clr-namespace:OkurleigaHF.Models"
         mc:Ignorable="d"
-        Title="Nýskrá leiguhúsnæði" Height="455.333" Width="527.333">
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="177,59,0,0" TextWrapping="Wrap" Text="Nýskrá leiguhúsnæði" VerticalAlignment="Top" Height="35" Width="172" FontSize="16" FontWeight="bold"/>
-        <TextBox HorizontalAlignment="Left" Height="34" Margin="108,102,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Width="328"/>
-        <materialDesign:PackIcon Kind="HomeEdit" Margin="73,102,0,0" Height="31" Width="25" />
-        <ComboBox
-          materialDesign:HintAssist.Hint="Póstnúmer"
-          IsEditable="True"
-          materialDesign:HintAssist.HintOpacity=".26" Height="34" Margin="109,157,86.667,235">
+        Title="Nýskrá leiguhúsnæði" Height="543.333" Width="498.666" Loaded="Window_Loaded">
+
+    <Grid Margin="3,0,0,0">
+        <TextBlock HorizontalAlignment="Left" Margin="167,56,0,0" TextWrapping="Wrap" Text="Nýskrá leiguhúsnæði" VerticalAlignment="Top" Height="35" Width="172" FontSize="16" FontWeight="bold"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="97,109,0,0" TextWrapping="Wrap" Text="{Binding Address}" VerticalAlignment="Top" Width="328"/>
+        <materialDesign:PackIcon Kind="HomeEdit" Margin="62,109,0,0" Height="31" Width="25" />
+        <ComboBox x:Name="cbZipCode"
+                  ItemsSource="{Binding ZipCode}"
+                  DisplayMemberPath="ZipCode"
+                  materialDesign:HintAssist.Hint="Póstnúmer"
+                  IsEditable="True"
+                  materialDesign:HintAssist.HintOpacity=".26" Height="34" Margin="97,164,67,316">
             <ComboBoxItem>
                 101
             </ComboBoxItem>
@@ -64,11 +68,14 @@
                 104
             </ComboBoxItem>
         </ComboBox>
-        <materialDesign:PackIcon Kind="LocationCity" Height="32" Width="25" Margin="74,156,0,0" RenderTransformOrigin="0.426,0.793" />
+        <materialDesign:PackIcon Kind="LocationCity" Height="32" Width="25" Margin="63,163,0,0" RenderTransformOrigin="0.426,0.793" />
         <ComboBox
-      materialDesign:HintAssist.Hint="Svefnherbergi"
-      IsEditable="True"
-      materialDesign:HintAssist.HintOpacity=".26" Height="43" Margin="110,198,85.667,185">
+            x:Name="cbBedrooms"
+            ItemsSource="{Binding Bedrooms}"
+            DisplayMemberPath="Bedrooms"
+            materialDesign:HintAssist.Hint="Svefnherbergi"
+            IsEditable="True"
+            materialDesign:HintAssist.HintOpacity=".26" Height="43" Margin="97,272,67,199">
             <ComboBoxItem>
                 1
             </ComboBoxItem>
@@ -100,14 +107,21 @@
                 10
             </ComboBoxItem>
         </ComboBox>
-        <materialDesign:PackIcon Kind="BedEmpty" Height="32" Width="24" Margin="76,205,0,0" />
+        <materialDesign:PackIcon Kind="BedEmpty" Height="32" Width="24" Margin="66,284,0,0" />
         <TextBox
+            Text="{Binding RentCost}"
   materialDesign:HintAssist.Hint="Mánaðarleg greiðsla"
   Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-  VerticalAlignment="Center" Height="44" Margin="109,246,85.667,136" />
-        <materialDesign:PackIcon Kind="Money" Height="32" Width="25" Margin="75,260,0,0" />
-        <Button x:Name="btnBack" Content="Til baka" HorizontalAlignment="Left" Margin="135,317,0,0" VerticalAlignment="Top" Width="129" Click="btnBack_Click"/>
-        <Button x:Name="btnSave" Content="Vista" HorizontalAlignment="Left" Margin="282,317,0,0" VerticalAlignment="Top" Width="129"/>
+  VerticalAlignment="Center" Height="44" Margin="97,333,66,137" />
+        <materialDesign:PackIcon Kind="Money" Height="32" Width="25" Margin="65,345,0,0" />
+        <Button x:Name="btnBack" Content="Til baka" HorizontalAlignment="Left" Margin="109,409,0,0" VerticalAlignment="Top" Width="129" Click="btnBack_Click"/>
+        <Button x:Name="btnSave" Content="Vista" HorizontalAlignment="Left" Margin="256,409,0,0" VerticalAlignment="Top" Width="129" Click="btnSave_Click"/>
+        <materialDesign:PackIcon Kind="ArrowTopLeftBottomRight" Height="32" Width="25" Margin="63,223,0,0" />
+        <TextBox
+  materialDesign:HintAssist.Hint="Floating Hint"
+  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+  VerticalAlignment="Center" Margin="97,221,67,251" Height="42" />
+        
 
     </Grid>
 </Window>

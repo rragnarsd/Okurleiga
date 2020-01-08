@@ -24,6 +24,7 @@
                 ZipCode = "245",
                 Address = "Lækjamót 1",
                 PropertySize = 100,
+                Bedrooms = 3,
                 RentCost = 150000
             };
 
@@ -32,6 +33,7 @@
                 ZipCode = "101",
                 Address = "Laugarvegur 50",
                 PropertySize = 65,
+                Bedrooms = 1,
                 RentCost = 210000
             };
 
@@ -40,6 +42,7 @@
                 ZipCode = "220",
                 Address = "Fjarðargata 13",
                 PropertySize = 80,
+                Bedrooms = 2,
                 RentCost = 180000
             };
 
@@ -48,6 +51,7 @@
                 ZipCode = "235",
                 Address = "Hafnargata 10",
                 PropertySize = 120,
+                Bedrooms = 4,
                 RentCost = 240000
             };
 
@@ -56,6 +60,7 @@
                 ZipCode = "260",
                 Address = "Hjallavegur 10",
                 PropertySize = 50,
+                Bedrooms = 1,
                 RentCost = 90000
             };
 
@@ -64,8 +69,8 @@
                 ZipCode = "860",
                 Address = "Austurvegur 4",
                 PropertySize = 200,
+                Bedrooms = 6,
                 RentCost = 60000,
-                IsAvailable = true
             };
 
             Property p7 = new Property()
@@ -73,8 +78,35 @@
                 ZipCode = "210",
                 Address = "Garðatorg 7",
                 PropertySize = 75,
-                RentCost = 190000,
-                IsAvailable = true
+                Bedrooms = 2,
+                RentCost = 190000
+            };
+
+            Property p8 = new Property()
+            {
+                ZipCode = "310",
+                Address = "Borgarbraut 12",
+                PropertySize = 130,
+                Bedrooms = 4,
+                RentCost = 100000
+            };
+
+            Property p9 = new Property()
+            {
+                ZipCode = "540",
+                Address = "Hnjúkabyggð 32",
+                PropertySize = 300,
+                Bedrooms = 5,
+                RentCost = 85000
+            };
+
+            Property p10 = new Property()
+            {
+                ZipCode = "260",
+                Address = "Fífumói 6",
+                PropertySize = 70,
+                Bedrooms = 2,
+                RentCost = 140000
             };
 
             context.Properties.AddOrUpdate(
@@ -85,7 +117,10 @@
                 p4,
                 p5,
                 p6,
-                p7
+                p7,
+                p8,
+                p9,
+                p10
                 );
 
             Tenant t1 = new Tenant()

@@ -3,7 +3,6 @@ C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\OkurleigaHF.exe
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\OkurleigaHF.pdb
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\EntityFramework.dll
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\FizzWare.NBuilder.dll
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\MaterialDesignColors.dll
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\MaterialDesignThemes.Wpf.dll
 C:\Users\Notandi\source\repos\OkurleigaHF\OkurleigaHF\bin\Debug\EntityFramework.xml

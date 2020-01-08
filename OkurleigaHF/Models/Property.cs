@@ -8,9 +8,12 @@ using System.Threading.Tasks;
 
 namespace OkurleigaHF.Models
 {
-    public class Property
+    public class Property : INotifyPropertyChanged
     {
-
+        //public Property()
+        //{
+        //    IsAvailable = true;
+        //}
 
 
         public int Id { get; set; }
@@ -34,6 +37,6 @@ namespace OkurleigaHF.Models
         public DateTime? DateRented { get; set; }
         public DateTime? DateReturned { get; set; }
 
-        
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

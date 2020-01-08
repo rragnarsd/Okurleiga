@@ -13,8 +13,9 @@
                 <DataGridTextColumn Header="Heimilisfang" Binding="{Binding Path=Address}"/>
                 <DataGridTextColumn Header="Póstnúmer" Binding="{Binding Path=ZipCode}"/>
                 <DataGridTextColumn Header="Stærð" Binding="{Binding Path=PropertySize}"/>
+                <DataGridTextColumn Header="Svefnherbergi" Binding="{Binding Path=Bedrooms}"/>
                 <DataGridTextColumn Header="Mánaðarleg greiðsla" Binding="{Binding Path=RentCost}"/>
-                <DataGridTextColumn Header="Á skrá" Binding="{Binding Path=IsAvailable}"/>
+                <DataGridTextColumn Header="Í leigu" Binding="{Binding Path=IsAvailable}"/>
             </DataGrid.Columns>
 
         </DataGrid>
