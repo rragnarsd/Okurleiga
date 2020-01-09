@@ -1,19 +1,37 @@
-﻿<Window x:Class="OkurleigaHF.TenantWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:OkurleigaHF"
-        mc:Ignorable="d"
-        Title="Tenant" Height="427.999" Width="808" Loaded="Window_Loaded">
-    <Grid >
-        <Button x:Name="btnNewTenant" Content="Nýskrá leigjanda" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="244" Height="37" Click="btnNewTenant_Click"/>
-        <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False" Height="244" Margin="33,121,29.333,0" VerticalAlignment="Top" Grid.RowSpan="2">
+﻿<Window
+    x:Class="OkurleigaHF.TenantWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:OkurleigaHF"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Leigjendur"
+    Width="808"
+    Height="427.999"
+    Loaded="Window_Loaded"
+    mc:Ignorable="d">
+    <Grid>
+        <Button
+            x:Name="btnNewTenant"
+            Width="244"
+            Height="37"
+            Margin="33,53,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="btnNewTenant_Click"
+            Content="Nýskrá leigjanda" />
+        <DataGrid
+            Grid.RowSpan="2"
+            Height="244"
+            Margin="33,121,29.333,0"
+            VerticalAlignment="Top"
+            AutoGenerateColumns="False"
+            ItemsSource="{Binding}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nafn" Binding="{Binding Path=FullName}"/>
-                <DataGridTextColumn Header="Símanúmer" Binding="{Binding Path=Phone}"/>
-                <DataGridTextColumn Header="Netfang" Binding="{Binding Path=Email}"/>
-                <DataGridTextColumn Header="Íbúð í útláni" Binding="{Binding Path=PropertyForRent.AddressZipCode}"/>
+                <DataGridTextColumn Binding="{Binding Path=FullName}" Header="Nafn" />
+                <DataGridTextColumn Binding="{Binding Path=Phone}" Header="Símanúmer" />
+                <DataGridTextColumn Binding="{Binding Path=Email}" Header="Netfang" />
+                <DataGridTextColumn Binding="{Binding Path=PropertyForRent.AddressZipCode}" Header="Íbúð í útláni" />
             </DataGrid.Columns>
         </DataGrid>
 

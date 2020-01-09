@@ -25,7 +25,8 @@
                 Address = "Lækjamót 1",
                 PropertySize = 100,
                 Bedrooms = 3,
-                RentCost = 150000
+                RentCost = 150000,
+                IsAvailable = false
             };
 
             Property p2 = new Property()
@@ -34,7 +35,8 @@
                 Address = "Laugarvegur 50",
                 PropertySize = 65,
                 Bedrooms = 1,
-                RentCost = 210000
+                RentCost = 210000,
+                IsAvailable = false
             };
 
             Property p3 = new Property()
@@ -43,7 +45,9 @@
                 Address = "Fjarðargata 13",
                 PropertySize = 80,
                 Bedrooms = 2,
-                RentCost = 180000
+                RentCost = 180000,
+                IsAvailable = false
+             
             };
 
             Property p4 = new Property()
@@ -52,7 +56,8 @@
                 Address = "Hafnargata 10",
                 PropertySize = 120,
                 Bedrooms = 4,
-                RentCost = 240000
+                RentCost = 240000,
+                IsAvailable = false
             };
 
             Property p5 = new Property()
@@ -61,7 +66,8 @@
                 Address = "Hjallavegur 10",
                 PropertySize = 50,
                 Bedrooms = 1,
-                RentCost = 90000
+                RentCost = 90000,
+                IsAvailable = false
             };
 
             Property p6 = new Property()
@@ -71,6 +77,8 @@
                 PropertySize = 200,
                 Bedrooms = 6,
                 RentCost = 60000,
+                IsAvailable = true
+               
             };
 
             Property p7 = new Property()
@@ -79,7 +87,8 @@
                 Address = "Garðatorg 7",
                 PropertySize = 75,
                 Bedrooms = 2,
-                RentCost = 190000
+                RentCost = 190000,
+                IsAvailable = true
             };
 
             Property p8 = new Property()
@@ -88,7 +97,8 @@
                 Address = "Borgarbraut 12",
                 PropertySize = 130,
                 Bedrooms = 4,
-                RentCost = 100000
+                RentCost = 100000,
+                IsAvailable = true
             };
 
             Property p9 = new Property()
@@ -97,7 +107,8 @@
                 Address = "Hnjúkabyggð 32",
                 PropertySize = 300,
                 Bedrooms = 5,
-                RentCost = 85000
+                RentCost = 85000,
+                IsAvailable = true
             };
 
             Property p10 = new Property()
@@ -106,7 +117,8 @@
                 Address = "Fífumói 6",
                 PropertySize = 70,
                 Bedrooms = 2,
-                RentCost = 140000
+                RentCost = 140000,
+                IsAvailable = true
             };
 
             context.Properties.AddOrUpdate(

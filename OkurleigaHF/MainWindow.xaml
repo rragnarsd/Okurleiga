@@ -19,7 +19,7 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="btnProperties_Click"
-            Content="Property" />
+            Content="Húsnæði" />
         <Button
             x:Name="btnTenants"
             Width="213"
@@ -28,7 +28,7 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="btnTenants_Click"
-            Content="Tenant" />
+            Content="Leigjendur" />
 
     </Grid>
 </Window>

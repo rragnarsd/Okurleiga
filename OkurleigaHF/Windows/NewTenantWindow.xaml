@@ -42,7 +42,7 @@
             Kind="EmailOutline" />
         <StackPanel
             Width="328"
-            Margin="66,109,0,137"
+            Margin="66,109,0,143.667"
             HorizontalAlignment="left"
             Orientation="Vertical">
             <TextBox
@@ -52,19 +52,19 @@
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding FullName}" />
             <TextBox
-                Height="44"
+                Height="46"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Símanúmer"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding Phone}" />
             <TextBox
-                Height="44"
+                Height="46"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Netfang"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding Email}" />
             <TextBox
-                Height="43"
+                Height="45"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Íbúð til útláns"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"

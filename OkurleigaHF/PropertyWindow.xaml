@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OkurleigaHF"
         mc:Ignorable="d"
-        Title="Property" Height="427.999" Width="808" Loaded="Window_Loaded">
+        Title="Húsnæði" Height="427.999" Width="808" Loaded="Window_Loaded">
     <Grid >
         <Button x:Name="btnNewProp" Content="Nýskrá leiguhúsnæði" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="244" Height="37" Click="btnNewProp_Click"/>
         <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False" Height="244" Margin="33,121,29.333,0" VerticalAlignment="Top" Grid.RowSpan="2">
@@ -15,7 +15,20 @@
                 <DataGridTextColumn Header="Stærð" Binding="{Binding Path=PropertySize}"/>
                 <DataGridTextColumn Header="Svefnherbergi" Binding="{Binding Path=Bedrooms}"/>
                 <DataGridTextColumn Header="Mánaðarleg greiðsla" Binding="{Binding Path=RentCost}"/>
-                <DataGridTextColumn Header="Í leigu" Binding="{Binding Path=IsAvailable}"/>
+                <DataGridTextColumn Header="Á skrá" Binding="{Binding Path=IsAvailableToString}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock HorizontalAlignment="Center" Text="Aðgerðir"/>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnEdit" Content="Breyta" Background="Transparent" Foreground="#FF0B13AD" BorderThickness="0" Click="btnEdit_Click"/>
+                                <Button x:Name="btnDelete" Content="Eyða" Background="Transparent" Foreground="#FFFF1313" BorderThickness="0" Click="btnDelete_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
 
         </DataGrid>

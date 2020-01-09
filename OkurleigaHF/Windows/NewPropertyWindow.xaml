@@ -13,7 +13,7 @@
     Loaded="Window_Loaded"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Margin="0,1,-0.333,-1.333">
         <StackPanel
             Width="255"
             Margin="71,61,110.667,349.667"
@@ -31,35 +31,36 @@
         <materialDesign:PackIcon
             Width="25"
             Height="25"
-            Margin="32,114,0,0"
+            Margin="32,122,0,0"
             Kind="HomeEdit" />
         <materialDesign:PackIcon
             Width="25"
             Height="25"
-            Margin="32,150,0,0"
+            Margin="32,167,0,0"
             Kind="LocationCity"
             RenderTransformOrigin="0.426,0.793" />
         <materialDesign:PackIcon
             Width="25"
             Height="25"
-            Margin="32,236,0,0"
+            Margin="32,257,0,0"
             Kind="BedEmpty" />
         <StackPanel
             Width="328"
-            Margin="66,109,0,137.667"
+            Margin="66,109,0,100.667"
             HorizontalAlignment="Left"
             Orientation="Vertical">
             <TextBox
                 Width="328"
-                Height="34"
+                Height="44"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
+                materialDesign:HintAssist.Hint="Heimilisfang"
                 Text="{Binding Address}"
                 TextWrapping="Wrap" />
             <ComboBox
                 x:Name="cbZipCode"
-                Height="34"
-                Margin="0,0,3,0"
+                Height="44"
+                Margin="0,0,1,0"
                 materialDesign:HintAssist.Hint="Póstnúmer"
                 materialDesign:HintAssist.HintOpacity=".26"
                 IsEditable="True">
@@ -167,20 +168,18 @@
                 <ComboBoxItem Content="880" />
                 <ComboBoxItem Content="900" />
 
-
-
             </ComboBox>
             <TextBox
-                Height="42"
-                Margin="0,0,2,0"
+                Height="44"
+                Margin="0,0,1,0"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Stærð"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
 
             <ComboBox
                 x:Name="cbBedrooms"
-                Height="43"
-                Margin="0,0,3,0"
+                Height="44"
+                Margin="0,0,1,0"
                 materialDesign:HintAssist.Hint="Svefnherbergi"
                 materialDesign:HintAssist.HintOpacity=".26"
                 IsEditable="True">
@@ -206,17 +205,17 @@
         <materialDesign:PackIcon
             Width="25"
             Height="25"
-            Margin="32,279,0,0"
+            Margin="32,302,0,0"
             Kind="Money" />
         <materialDesign:PackIcon
             Width="25"
             Height="25"
-            Margin="32,190,0,0"
+            Margin="32,212,0,0"
             Kind="ArrowTopLeftBottomRight" />
         <Button
             x:Name="btnBack"
             Width="108"
-            Margin="156,332,0,0"
+            Margin="156,354,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="btnBack_Click"
@@ -224,7 +223,7 @@
         <Button
             x:Name="btnSave"
             Width="108"
-            Margin="286,332,0,0"
+            Margin="286,354,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="btnSave_Click"
