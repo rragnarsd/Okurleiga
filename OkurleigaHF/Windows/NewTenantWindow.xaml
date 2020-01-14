@@ -9,7 +9,9 @@
     Title="Nýskrá leigjanda"
     Width="443.666"
     Height="478.333"
-    mc:Ignorable="d" Loaded="Window_Loaded">
+    Loaded="Window_Loaded"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
     <Grid>
         <StackPanel
             Margin="2,61,-0.333,357.667"

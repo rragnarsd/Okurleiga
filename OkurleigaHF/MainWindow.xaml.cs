@@ -28,6 +28,7 @@ namespace OkurleigaHF
         {
             InitializeComponent();
 
+
         }
 
         private void btnProperties_Click(object sender, RoutedEventArgs e)

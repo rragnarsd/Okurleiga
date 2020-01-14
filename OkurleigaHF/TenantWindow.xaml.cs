@@ -25,6 +25,7 @@ namespace OkurleigaHF
     public partial class TenantWindow : Window
     {
         public ObservableCollection<Tenant> Tenants { get; set; }
+        public static WindowStartupLocation OkurleigaHF { get; internal set; }
 
         public TenantWindow()
         {

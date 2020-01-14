@@ -10,13 +10,17 @@ namespace OkurleigaHF.Windows
     /// </summary>
     public partial class NewPropertyWindow : Window
     {
+        private Property p;
+
         public Property Property { get; set; }
 
-        public NewPropertyWindow()
+        public NewPropertyWindow(Property p)
         {
             InitializeComponent();
 
             Property = new Property();
+
+            this.p = p;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

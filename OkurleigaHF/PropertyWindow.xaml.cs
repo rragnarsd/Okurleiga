@@ -1,21 +1,10 @@
-﻿using OkurleigaHF.Models;
-using System;
-using System.Collections.Generic;
+﻿using OkurleigaHF.EF;
+using OkurleigaHF.Models;
+using OkurleigaHF.Windows;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Entity;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using OkurleigaHF.EF;
-using System.Data.Entity;
-using OkurleigaHF.Windows;
 
 namespace OkurleigaHF
 {
@@ -44,19 +33,28 @@ namespace OkurleigaHF
 
         private void btnNewProp_Click(object sender, RoutedEventArgs e)
         {
-            NewPropertyWindow win = new NewPropertyWindow();
+            Property p = new Property();
+
+            NewPropertyWindow win = new NewPropertyWindow(p);
 
             win.ShowDialog();
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
+            Property p = ((sender as Button).DataContext) as Property;
+
+            NewPropertyWindow win = new NewPropertyWindow(p);
+            win.ShowDialog();
 
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            Property p = ((sender as Button).DataContext) as Property;
 
+            SharedContext.DBContext.Properties.Remove(p);
+            SharedContext.DBContext.SaveChanges();
         }
     }
 }
