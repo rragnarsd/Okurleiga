@@ -12,5 +12,6 @@ namespace OkurleigaHF.EF
     {
         public DbSet<Property> Properties { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
+        public DbSet<Incident> Incidents { get; set; }
     }
 }

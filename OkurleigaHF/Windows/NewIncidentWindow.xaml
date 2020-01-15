@@ -1,0 +1,90 @@
+﻿<Window x:Class="OkurleigaHF.Windows.NewIncidentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:OkurleigaHF.Windows"
+        mc:Ignorable="d"
+        Title="Atvikaskráning" Height="478.333" Width="443.666" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel
+            Margin="2,61,-0.333,357.667"
+            HorizontalAlignment="Center"
+            Orientation="Vertical">
+            <TextBlock
+            Width="130"
+            Margin="-15,0,-7.333,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            FontSize="20"
+            FontWeight="bold"
+            TextWrapping="Wrap" 
+            Text="Nýskrá atvik"/>
+        </StackPanel>
+        <StackPanel
+            Width="343"
+            Margin="60,109,0,100.667"
+            HorizontalAlignment="Left"
+            Orientation="Vertical"/>
+        <TextBox
+                Height="46"
+                VerticalAlignment="Center"
+                materialDesign:HintAssist.Hint="Titill"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                Text="{Binding Title}" Margin="69,104,47.667,298.667"/>
+        <materialDesign:PackIcon Kind="FormatTitle" Margin="34,121,0,0" Width="25" Height="25" />
+
+        <ComboBox
+            x:Name="cbProperty"
+            Width="320"
+            Height="41"
+            Margin="70,148,0,259.667"
+            HorizontalAlignment="Left"
+            materialDesign:HintAssist.Hint="Húsnæði"
+            materialDesign:HintAssist.HintOpacity=".26"
+            DisplayMemberPath="Address"
+            IsEditable="True"
+            ItemsSource="{Binding Address}" />
+        <materialDesign:PackIcon Kind="HomeEdit" Margin="34,159,0,0" Width="25" Height="25"/>
+        <TextBox
+            Width="320"
+            Height="82"
+            Margin="70,208,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            materialDesign:HintAssist.Hint="Description"
+            AcceptsReturn="True"
+            Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
+            Text="{Binding Description}"
+            TextWrapping="Wrap"
+            VerticalScrollBarVisibility="Auto" />
+        <materialDesign:PackIcon Kind="AboutVariant" Margin="34,210,0,0" Width="25" Height="25"/>
+        <ComboBox
+            x:Name="cbPriority"
+            Width="320"
+            Height="41"
+            Margin="72,295,0,112.667"
+            HorizontalAlignment="Left"
+            materialDesign:HintAssist.Hint="Mikilvægi"
+            materialDesign:HintAssist.HintOpacity=".26"
+            DisplayMemberPath="Address"
+            IsEditable="True"/>
+        <!--ItemsSource="{Binding Source={StaticResource enumValues}}"-->
+        <materialDesign:PackIcon Kind="PriorityHigh" Margin="34,306,0,0" Width="25" Height="25"/>
+        <Button
+            x:Name="btnBack"
+            Width="108"
+            Margin="155,357,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Til baka" Click="btnBack_Click" />
+        <Button
+            x:Name="btnSave"
+            Width="108"
+            Margin="285,357,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Vista" Click="btnSave_Click" />
+    </Grid>
+</Window>

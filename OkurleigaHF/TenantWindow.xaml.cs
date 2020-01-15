@@ -25,7 +25,6 @@ namespace OkurleigaHF
     public partial class TenantWindow : Window
     {
         public ObservableCollection<Tenant> Tenants { get; set; }
-        public static WindowStartupLocation OkurleigaHF { get; internal set; }
 
         public TenantWindow()
         {
@@ -45,9 +44,27 @@ namespace OkurleigaHF
 
         private void btnNewTenant_Click(object sender, RoutedEventArgs e)
         {
-            NewTenantWindow win = new NewTenantWindow();
+            Tenant t = new Tenant();
+
+            NewTenantWindow win = new NewTenantWindow(t);
 
             win.ShowDialog();
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Tenant t = ((sender as Button).DataContext) as Tenant;
+
+            NewTenantWindow win = new NewTenantWindow(t);
+            win.ShowDialog();
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            Tenant t = ((sender as Button).DataContext) as Tenant;
+
+            SharedContext.DBContext.Tenants.Remove(t);
+            SharedContext.DBContext.SaveChanges();
         }
     }
 }

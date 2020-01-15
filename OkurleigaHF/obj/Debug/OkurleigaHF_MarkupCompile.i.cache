@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\App.xaml
-5-1829184332
+7-1789186048
 
-152062984879
+181056287643
 20719901199
-MainWindow.xaml;PropertyWindow.xaml;TenantWindow.xaml;Windows\NewPropertyWindow.xaml;Windows\NewTenantWindow.xaml;
+MainWindow.xaml;PropertyWindow.xaml;TenantWindow.xaml;Windows\IncidentWindow.xaml;Windows\NewIncidentWindow.xaml;Windows\NewPropertyWindow.xaml;Windows\NewTenantWindow.xaml;
 
-False
+True
 

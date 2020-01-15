@@ -96,3 +96,8 @@ C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF.csp
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF.csproj.CopyComplete
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF.exe
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF.pdb
+C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF.csprojAssemblyReference.cache
+C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\Windows\IncidentWindow.g.cs
+C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\Windows\IncidentWindow.baml
+C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\Windows\NewIncidentWindow.g.cs
+C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\Windows\NewIncidentWindow.baml

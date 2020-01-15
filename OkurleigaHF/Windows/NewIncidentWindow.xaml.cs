@@ -17,28 +17,24 @@ using System.Windows.Shapes;
 namespace OkurleigaHF.Windows
 {
     /// <summary>
-    /// Interaction logic for NewTenantWindow.xaml
+    /// Interaction logic for NewIncidentWindow.xaml
     /// </summary>
-    public partial class NewTenantWindow : Window
+    public partial class NewIncidentWindow : Window
     {
-        private Tenant t;
+        private Incident i;
 
-        public Tenant Tenant { get; set; }
+        public Incident Incident { get; set; }
 
-        public NewTenantWindow(Tenant t)
+        public NewIncidentWindow(Incident i)
         {
-          
             InitializeComponent();
 
-            Tenant = new Tenant();
-
-            this.t = t;
+            Incident = new Incident();
         }
-
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.DataContext = Tenant;
+            this.DataContext = Incident;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -48,7 +44,7 @@ namespace OkurleigaHF.Windows
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            SharedContext.DBContext.Tenants.Add(Tenant);
+            SharedContext.DBContext.Incidents.Add(Incident);
             SharedContext.DBContext.SaveChanges();
 
             this.Close();

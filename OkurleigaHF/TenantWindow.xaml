@@ -26,12 +26,26 @@
             Margin="33,121,29.333,0"
             VerticalAlignment="Top"
             AutoGenerateColumns="False"
-            ItemsSource="{Binding}">
+            ItemsSource="{Binding}"
+            CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=FullName}" Header="Nafn" />
                 <DataGridTextColumn Binding="{Binding Path=Phone}" Header="Símanúmer" />
                 <DataGridTextColumn Binding="{Binding Path=Email}" Header="Netfang" />
                 <DataGridTextColumn Binding="{Binding Path=PropertyForRent.AddressZipCode}" Header="Íbúð í útláni" />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock HorizontalAlignment="Center" Text="Aðgerðir"/>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnEdit" Content="Breyta" Background="Transparent" Foreground="#FF0B13AD" BorderThickness="0" Click="btnEdit_Click"/>
+                                <Button x:Name="btnDelete" Content="Eyða" Background="Transparent" Foreground="#FFFF1313" BorderThickness="0" Click="btnDelete_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 

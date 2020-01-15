@@ -73,11 +73,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Incident.cs" />
     <Compile Include="PropertyWindow.xaml.cs">
       <DependentUpon>PropertyWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TenantWindow.xaml.cs">
       <DependentUpon>TenantWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\IncidentWindow.xaml.cs">
+      <DependentUpon>IncidentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NewIncidentWindow.xaml.cs">
+      <DependentUpon>NewIncidentWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\NewPropertyWindow.xaml.cs">
       <DependentUpon>NewPropertyWindow.xaml</DependentUpon>
@@ -104,6 +111,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TenantWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\IncidentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NewIncidentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

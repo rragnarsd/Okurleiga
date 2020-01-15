@@ -1,0 +1,38 @@
+﻿<Window x:Class="OkurleigaHF.Windows.IncidentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OkurleigaHF.Windows"
+        mc:Ignorable="d"
+        Title="Atvikaskráning" 
+        Width="808"
+        Height="427.999" 
+        Loaded="Window_Loaded">
+    <Grid>
+        <Button x:Name="btnNewIncident" Content="Skrá nýtt atvik" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="189" Click="btnNewIncident_Click"/>
+        <DataGrid ItemsSource="{Binding}" CanUserAddRows="False" AutoGenerateColumns="False"
+            Height="244"
+            Margin="33,121,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="736" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Titill" Binding="{Binding Path=Title}"/>
+                <DataGridTextColumn Header="Íbúð" Binding="{Binding Path=Property}"/>
+                <DataGridTextColumn Header="Mikilvægi" Binding="{Binding Path=Priority}"/>
+                <DataGridTextColumn Header="Staða" Binding="{Binding Path=IsActive}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock HorizontalAlignment="Center" Text="Aðgerðir"/>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnEditIncident" Content="Edit" Background="Transparent" BorderThickness="0" Foreground="#FF0B13AD" Click="btnEditIncident_Click"/>
+                                <Button x:Name="btnDeleteIncident" Content="Delete" Background="Transparent" BorderThickness="0" Foreground="#FFFF1313" Click="btnDeleteIncident_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

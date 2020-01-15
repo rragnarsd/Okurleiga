@@ -40,6 +40,15 @@ namespace OkurleigaHF
             win.ShowDialog();
         }
 
+        private void btnNewIncident_Click(object sender, RoutedEventArgs e)
+        {
+            Incident i = new Incident();
+
+            IncidentWindow win = new IncidentWindow(i);
+
+            win.ShowDialog();
+        }
+
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             Property p = ((sender as Button).DataContext) as Property;
@@ -56,5 +65,7 @@ namespace OkurleigaHF
             SharedContext.DBContext.Properties.Remove(p);
             SharedContext.DBContext.SaveChanges();
         }
+
+        
     }
 }
