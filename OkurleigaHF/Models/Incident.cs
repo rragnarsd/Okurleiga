@@ -66,11 +66,18 @@ namespace OkurleigaHF.Models
         public DateTime IncidentReportedDate { get; set; }
         public DateTime? IncidentClosedDate { get; set; }
 
-        public enum Priority
+        private string _Priority;
+        public string Priority
         {
-            Low,
-            Medium,
-            High
+            get
+            {
+                return _Priority;
+            }
+            set
+            {
+                _Priority = value;
+                OnPropertyChanged();
+            }
         }
     }
 }

@@ -79,12 +79,13 @@
             Kind="House" />
         <Button
             x:Name="btnBack"
+            Background="#FF1B5481"
             Width="108"
             Margin="156,318,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="btnBack_Click"
-            Content="Til baka" />
+            Content="Til baka" BorderBrush="#FF1B5481" />
         <Button
             x:Name="btnSave"
             Width="108"
@@ -92,6 +93,6 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="btnSave_Click"
-            Content="Vista" />
+            Content="Vista" BorderBrush="#FF1B5481" Background="#FF1B5481" />
     </Grid>
 </Window>

@@ -19,7 +19,8 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="btnNewTenant_Click"
-            Content="Nýskrá leigjanda" />
+            Content="Nýskrá leigjanda" 
+            />
         <DataGrid
             Grid.RowSpan="2"
             Height="244"

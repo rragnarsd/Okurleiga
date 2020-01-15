@@ -14,22 +14,24 @@
     <Grid>
         <Button
             x:Name="btnNewProp"
+            Background="#FF1B5481"
             Width="244"
             Height="37"
             Margin="33,53,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="btnNewProp_Click"
-            Content="Nýskrá leiguhúsnæði" />
+            Content="Nýskrá leiguhúsnæði" BorderBrush="#FF1B5481" />
         <Button
             x:Name="btnNewIncident"
+            Background="#FF1B5481"
             Width="244"
             Height="37"
             Margin="33,107,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="btnNewIncident_Click"
-            Content="Atvikaskráning" />
+            Content="Atvikaskráning" BorderBrush="#FF1B5481" />
         <DataGrid
             Width="818"
             Height="244"

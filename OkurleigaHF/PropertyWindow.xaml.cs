@@ -1,6 +1,7 @@
 ﻿using OkurleigaHF.EF;
 using OkurleigaHF.Models;
 using OkurleigaHF.Windows;
+using System;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Windows;
@@ -33,7 +34,7 @@ namespace OkurleigaHF
 
         private void btnNewProp_Click(object sender, RoutedEventArgs e)
         {
-            Property p = new Property();
+            Property p = new Property(new Property());
 
             NewPropertyWindow win = new NewPropertyWindow(p);
 

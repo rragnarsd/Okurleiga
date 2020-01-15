@@ -218,6 +218,8 @@
             Margin="156,354,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            Background="#FF1B5481"
+            BorderBrush="#FF1B5481"
             Click="btnBack_Click"
             Content="Til baka" />
         <Button
@@ -226,6 +228,8 @@
             Margin="286,354,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            Background="#FF1B5481"
+            BorderBrush="#FF1B5481"
             Click="btnSave_Click"
             Content="Vista" />
 

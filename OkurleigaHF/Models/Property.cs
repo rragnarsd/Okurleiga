@@ -11,11 +11,14 @@ namespace OkurleigaHF.Models
 {
     public class Property : INotifyPropertyChanged
     {
-        public Property()
+        public Property(Property property)
         {
             IsAvailable = true;
         }
 
+        public Property()
+        {
+        }
 
         public int Id { get; set; }
 
