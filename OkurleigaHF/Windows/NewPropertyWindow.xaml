@@ -174,7 +174,8 @@
                 Margin="0,0,1,0"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Stærð"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                Text="{Binding PropertySize}" />
 
             <ComboBox
                 x:Name="cbBedrooms"

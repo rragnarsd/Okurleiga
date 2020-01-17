@@ -25,7 +25,8 @@
                 FontSize="20"
                 FontWeight="bold"
                 Text="Nýskrá leigjanda"
-                TextWrapping="Wrap" Height="32" />
+                TextWrapping="Wrap" 
+                Height="32" />
         </StackPanel>
         <materialDesign:PackIcon
             Width="25"
@@ -65,11 +66,11 @@
                 materialDesign:HintAssist.Hint="Netfang"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding Email}" />
-            <TextBox
+            <ComboBox
+                x:Name="cbPropertyAddress"
                 Height="45"
-                VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Íbúð til útláns"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                DisplayMemberPath="Address"
                 Text="{Binding PropertyForRent}" />
         </StackPanel>
         <materialDesign:PackIcon

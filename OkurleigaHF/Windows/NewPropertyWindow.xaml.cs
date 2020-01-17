@@ -1,7 +1,7 @@
 ﻿using OkurleigaHF.EF;
 using OkurleigaHF.Models;
-using System;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace OkurleigaHF.Windows
 {
@@ -39,19 +39,31 @@ namespace OkurleigaHF.Windows
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < cbZipCode.Items.Count; i++)
+
+            this.DataContext = CloneOfProperty;
+
+
+            for(int i = 0; i < cbZipCode.Items.Count; i++)
             {
-                string zipFromComboBox = cbZipCode.Items[i].ToString();
-                
-                if(zipFromComboBox == p.ZipCode)
+                string zipFromComboBox = (cbZipCode.Items[i] as ComboBoxItem).Content.ToString();
+
+                if (zipFromComboBox == p.ZipCode)
                 {
                     cbZipCode.SelectedIndex = i;
                     break;
                 }
             }
 
-            this.DataContext = CloneOfProperty;
+            for (int i = 0; i < cbBedrooms.Items.Count; i++)
+            {
+                string fromComboBox = (cbBedrooms.Items[i] as ComboBoxItem).Content.ToString();
 
+                if (fromComboBox == p.Bedrooms.ToString())
+                {
+                    cbBedrooms.SelectedIndex = i;
+                    break;
+                }
+            }
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

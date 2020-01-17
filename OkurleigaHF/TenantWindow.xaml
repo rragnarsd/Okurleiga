@@ -13,6 +13,8 @@
     <Grid>
         <Button
             x:Name="btnNewTenant"
+            Background="#FF1B5481"
+            BorderBrush="#FF1B5481"
             Width="244"
             Height="37"
             Margin="33,53,0,0"

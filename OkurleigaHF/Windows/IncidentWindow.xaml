@@ -19,7 +19,8 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="btnNewIncident_Click"
-            Content="Skrá nýtt atvik" BorderBrush="#FF1B5481" />
+            Content="Skrá nýtt atvik" 
+            BorderBrush="#FF1B5481" />
         <DataGrid
             Width="736"
             Height="244"
@@ -33,7 +34,7 @@
                 <DataGridTextColumn Binding="{Binding Path=Title}" Header="Titill" />
                 <DataGridTextColumn Binding="{Binding Path=Property}" Header="Íbúð" />
                 <DataGridTextColumn Binding="{Binding Path=Priority}" Header="Mikilvægi" />
-                <DataGridTextColumn Binding="{Binding Path=IsActive}" Header="Staða" />
+                <DataGridTextColumn Binding="{Binding Path=IsActiveToString}" Header="Staða" />
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.Header>
                         <TextBlock HorizontalAlignment="Center" Text="Aðgerðir" />

@@ -13,7 +13,7 @@
     WindowStartupLocation="CenterScreen">
     
     <Grid>
-        <Image Source="photos/building.jpg" Stretch="Fill"/>
+        <Image Source="Pictures/building.jpg" Stretch="Fill"/>
         
         <Button
             x:Name="btnProperties"
@@ -24,8 +24,7 @@
             VerticalAlignment="Top"
             Click="btnProperties_Click"
             Content="Húsnæði" Background="#FF1B5481" BorderBrush="#FF1B5481" FontSize="16"
-            materialDesign:ButtonAssist.CornerRadius="2"
-            ToolTip="MaterialDesignRaisedLightButton with Round Corners"/>
+            materialDesign:ButtonAssist.CornerRadius="2"/>
         <Button
             x:Name="btnTenants"
             Width="213"
@@ -35,7 +34,6 @@
             VerticalAlignment="Top"
             Click="btnTenants_Click"
             Content="Leigjendur" BorderBrush="#FF1B5481" Background="#FF1B5481" FontSize="16"
-            materialDesign:ButtonAssist.CornerRadius="2"
-            ToolTip="MaterialDesignRaisedLightButton with Round Corners"/>
+            materialDesign:ButtonAssist.CornerRadius="2"/>
     </Grid>
 </Window>

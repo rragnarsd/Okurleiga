@@ -44,7 +44,8 @@ namespace OkurleigaHF.Windows
         {
             Incident i = ((sender as Button).DataContext) as Incident;
 
-
+            NewIncidentWindow win = new NewIncidentWindow(i);
+            win.ShowDialog();
         }
 
         private void btnDeleteIncident_Click(object sender, RoutedEventArgs e)

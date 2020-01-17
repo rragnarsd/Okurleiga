@@ -185,29 +185,28 @@
                 t5
                 );
 
-            //Incident i1 = new Incident()
-            //{
-            //    Title = "Baðherbergishurð",
-            //    Property = p7,
-            //    Description = "Hurð inn á baði er brotin",
-            //    IsActive = false,
-            //    IncidentClosedDate = new DateTime(2020, 01, 03),
-            //    //priority = 
-            //};
+            Incident i1 = new Incident()
+            {
+                Title = "Baðherbergishurð",
+                Property = p7,
+                Description = "Hurð inn á baði er brotin",
+                IsActive = false,
+                IncidentClosedDate = new DateTime(2020, 01, 03)
+            };
 
-            //Incident i2 = new Incident()
-            //{
-            //    Title = "Eldhúsvifta",
-            //    Property = p3,
-            //    Description = "Viftan inn í eldhúsi virkar ekki",
-            //    IsActive = true
-            //};
+            Incident i2 = new Incident()
+            {
+                Title = "Eldhúsvifta",
+                Property = p3,
+                Description = "Viftan inn í eldhúsi virkar ekki",
+                IsActive = true
+            };
 
-            //context.Incidents.AddOrUpdate(
-            //    i => i.Property,
-            //    i1,
-            //    i2
-            //    );
+            context.Incidents.AddOrUpdate(
+                i => i.Property,
+                i1,
+                i2
+                );
 
 
             context.SaveChanges();
