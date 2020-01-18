@@ -1,18 +1,7 @@
 ﻿using OkurleigaHF.EF;
 using OkurleigaHF.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace OkurleigaHF.Windows
 {
@@ -21,24 +10,30 @@ namespace OkurleigaHF.Windows
     /// </summary>
     public partial class NewTenantWindow : Window
     {
-        private Tenant t;
+        public Tenant SentInTenant { get; set; }
+        public Tenant CloneOfTenant { get; set; }
 
-        public Tenant Tenant { get; set; }
+        public ObservableCollection<Tenant> Tenants { get; set; }
 
-        public NewTenantWindow(Tenant t)
+        public NewTenantWindow(Tenant sentInTenant)
         {
-          
             InitializeComponent();
 
-            Tenant = new Tenant();
+            SentInTenant = sentInTenant;
 
-            this.t = t;
+            CloneOfTenant = new Tenant()
+            {
+                FullName = SentInTenant.FullName,
+                Email = SentInTenant.Email,
+                Phone = SentInTenant.Phone,
+                PropertyForRent = SentInTenant.PropertyForRent
+            };
         }
 
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.DataContext = Tenant;
+            this.DataContext = CloneOfTenant;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -48,7 +43,12 @@ namespace OkurleigaHF.Windows
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            SharedContext.DBContext.Tenants.Add(Tenant);
+            SentInTenant.FullName = CloneOfTenant.FullName;
+            SentInTenant.Email = CloneOfTenant.Email;
+            SentInTenant.Phone = CloneOfTenant.Phone;
+            SentInTenant.PropertyForRent = CloneOfTenant.PropertyForRent;
+
+            SharedContext.DBContext.Tenants.Add(SentInTenant);
             SharedContext.DBContext.SaveChanges();
 
             this.Close();

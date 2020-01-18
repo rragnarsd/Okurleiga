@@ -19,14 +19,14 @@
             Orientation="Vertical">
             <TextBlock
                 Width="163"
+                Height="32"
                 Margin="-15,0,-7.333,0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
                 FontSize="20"
                 FontWeight="bold"
                 Text="Nýskrá leigjanda"
-                TextWrapping="Wrap" 
-                Height="32" />
+                TextWrapping="Wrap" />
         </StackPanel>
         <materialDesign:PackIcon
             Width="25"
@@ -80,20 +80,23 @@
             Kind="House" />
         <Button
             x:Name="btnBack"
-            Background="#FF1B5481"
             Width="108"
             Margin="156,318,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            Background="#FF1B5481"
+            BorderBrush="#FF1B5481"
             Click="btnBack_Click"
-            Content="Til baka" BorderBrush="#FF1B5481" />
+            Content="Til baka" />
         <Button
             x:Name="btnSave"
             Width="108"
             Margin="286,318,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            Background="#FF1B5481"
+            BorderBrush="#FF1B5481"
             Click="btnSave_Click"
-            Content="Vista" BorderBrush="#FF1B5481" Background="#FF1B5481" />
+            Content="Vista" />
     </Grid>
 </Window>

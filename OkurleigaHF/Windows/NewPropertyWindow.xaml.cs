@@ -1,5 +1,6 @@
 ﻿using OkurleigaHF.EF;
 using OkurleigaHF.Models;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -10,31 +11,28 @@ namespace OkurleigaHF.Windows
     /// </summary>
     public partial class NewPropertyWindow : Window
     {
-        private Property p;
-
-        public Property Property { get; set; }
+        public Property SentInProperty { get; set; }
         public Property CloneOfProperty { get; set; }
 
-        public NewPropertyWindow(Property p)
+        public ObservableCollection<Property> Properties { get; set; }
+
+        public NewPropertyWindow(Property sentInProperty)
         {
             InitializeComponent();
 
-            CloneOfProperty = new Property()
+            SentInProperty = sentInProperty;
+
+            CloneOfProperty = new Property
             {
-                Address = p.Address,
-                ZipCode = p.ZipCode,
-                Bedrooms = p.Bedrooms,
-                PropertySize = p.PropertySize,
-                RentCost = p.RentCost,
-                IsAvailable = p.IsAvailable,
-                DateRented = p.DateRented,
-                DateReturned = p.DateReturned
-
+                Address = SentInProperty.Address,
+                ZipCode = SentInProperty.ZipCode,
+                Bedrooms = SentInProperty.Bedrooms,
+                PropertySize = SentInProperty.PropertySize,
+                RentCost = SentInProperty.RentCost,
+                IsAvailable = SentInProperty.IsAvailable,
+                DateRented = SentInProperty.DateRented,
+                DateReturned = SentInProperty.DateReturned
             };
-
-            Property = new Property();
-
-            this.p = p;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -43,11 +41,11 @@ namespace OkurleigaHF.Windows
             this.DataContext = CloneOfProperty;
 
 
-            for(int i = 0; i < cbZipCode.Items.Count; i++)
+            for (int i = 0; i < cbZipCode.Items.Count; i++)
             {
                 string zipFromComboBox = (cbZipCode.Items[i] as ComboBoxItem).Content.ToString();
 
-                if (zipFromComboBox == p.ZipCode)
+                if (zipFromComboBox == SentInProperty.ZipCode)
                 {
                     cbZipCode.SelectedIndex = i;
                     break;
@@ -58,7 +56,7 @@ namespace OkurleigaHF.Windows
             {
                 string fromComboBox = (cbBedrooms.Items[i] as ComboBoxItem).Content.ToString();
 
-                if (fromComboBox == p.Bedrooms.ToString())
+                if (fromComboBox == SentInProperty.Bedrooms.ToString())
                 {
                     cbBedrooms.SelectedIndex = i;
                     break;
@@ -73,19 +71,19 @@ namespace OkurleigaHF.Windows
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            p.ZipCode = cbZipCode.SelectedIndex.ToString();
-            p.Bedrooms = cbBedrooms.SelectedIndex;
+            //SentInProperty.ZipCode = cbZipCode.SelectedIndex.ToString();
+            //SentInProperty.Bedrooms = cbBedrooms.SelectedIndex;
 
-            p.Address = CloneOfProperty.Address;
-            p.ZipCode = CloneOfProperty.ZipCode;
-            p.Bedrooms = CloneOfProperty.Bedrooms;
-            p.PropertySize = CloneOfProperty.PropertySize;
-            p.RentCost = CloneOfProperty.RentCost;
-            p.IsAvailable = CloneOfProperty.IsAvailable;
-            p.DateRented = CloneOfProperty.DateRented;
-            p.DateReturned = CloneOfProperty.DateReturned;
+            SentInProperty.Address = CloneOfProperty.Address;
+            SentInProperty.ZipCode = CloneOfProperty.ZipCode;
+            SentInProperty.Bedrooms = CloneOfProperty.Bedrooms;
+            SentInProperty.PropertySize = CloneOfProperty.PropertySize;
+            SentInProperty.RentCost = CloneOfProperty.RentCost;
+            SentInProperty.IsAvailable = CloneOfProperty.IsAvailable;
+            SentInProperty.DateRented = CloneOfProperty.DateRented;
+            SentInProperty.DateReturned = CloneOfProperty.DateReturned;
 
-            SharedContext.DBContext.Properties.Add(Property);
+            SharedContext.DBContext.Properties.Add(SentInProperty);
             SharedContext.DBContext.SaveChanges();
 
             this.Close();

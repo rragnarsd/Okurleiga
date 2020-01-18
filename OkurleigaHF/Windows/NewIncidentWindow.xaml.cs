@@ -15,11 +15,11 @@ namespace OkurleigaHF.Windows
 
         public ObservableCollection<Incident> Incidents { get; set; }
 
-        public NewIncidentWindow(Incident SentInIncident)
+        public NewIncidentWindow(Incident sentInIncident)
         {
             InitializeComponent();
 
-            SentInIncident = new Incident();
+            SentInIncident = sentInIncident;
 
             CloneOfIncident = new Incident()
             {

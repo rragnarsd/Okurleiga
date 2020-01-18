@@ -34,7 +34,7 @@ namespace OkurleigaHF
 
         private void btnNewProp_Click(object sender, RoutedEventArgs e)
         {
-            Property p = new Property(new Property());
+            Property p = new Property();
 
             NewPropertyWindow win = new NewPropertyWindow(p);
 

@@ -1,8 +1,7 @@
 ﻿namespace OkurleigaHF.Migrations
 {
-    
+
     using OkurleigaHF.Models;
-    using System;
     using System.Data.Entity.Migrations;
 
     internal sealed class Configuration : DbMigrationsConfiguration<OkurleigaHF.EF.OkDBContext>
@@ -19,6 +18,7 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
+
 
             Property p1 = new Property()
             {
@@ -48,7 +48,7 @@
                 Bedrooms = 2,
                 RentCost = 180000,
                 IsAvailable = false
-             
+
             };
 
             Property p4 = new Property()
@@ -79,7 +79,7 @@
                 Bedrooms = 6,
                 RentCost = 60000,
                 IsAvailable = true
-               
+
             };
 
             Property p7 = new Property()
@@ -183,31 +183,30 @@
                 t3,
                 t4,
                 t5
-                );
+        );
 
-            Incident i1 = new Incident()
-            {
-                Title = "Baðherbergishurð",
-                Property = p7,
-                Description = "Hurð inn á baði er brotin",
-                IsActive = false,
-                IncidentClosedDate = new DateTime(2020, 01, 03)
-            };
+            //Incident i1 = new Incident()
+            //{
+            //    Title = "Baðherbergishurð",
+            //    Property = p7,
+            //    Description = "Hurð inn á baði er brotin",
+            //    IsActive = false,
+            //    IncidentClosedDate = new DateTime(2020, 01, 03)
+            //};
 
-            Incident i2 = new Incident()
-            {
-                Title = "Eldhúsvifta",
-                Property = p3,
-                Description = "Viftan inn í eldhúsi virkar ekki",
-                IsActive = true
-            };
+            //Incident i2 = new Incident()
+            //{
+            //    Title = "Eldhúsvifta",
+            //    Property = p3,
+            //    Description = "Viftan inn í eldhúsi virkar ekki",
+            //    IsActive = true
+            //};
 
-            context.Incidents.AddOrUpdate(
-                i => i.Property,
-                i1,
-                i2
-                );
-
+            //context.Incidents.AddOrUpdate(
+            //    i => i.Property,
+            //    i1,
+            //    i2
+            //    );
 
             context.SaveChanges();
         }

@@ -10,23 +10,17 @@
         Title="Atvikaskráning" Height="478.333" Width="443.666" Loaded="Window_Loaded">
 
     <Grid>
-        <StackPanel
-            Margin="2,61,-0.333,357.667"
-            HorizontalAlignment="Center"
-            Orientation="Vertical">
-            <TextBlock
+        <TextBlock
             Width="130"
-            Margin="-15,0,-7.333,0"
+            Margin="0,67,153.667,354.667"
             HorizontalAlignment="Right"
             VerticalAlignment="Center"
             FontSize="20"
             FontWeight="bold"
-            TextWrapping="Wrap" 
             Text="Nýskrá atvik"/>
-        </StackPanel>
         <StackPanel
-            Width="343"
-            Margin="60,109,0,100.667"
+            Width="372"
+            Margin="31,30,0,38.667"
             HorizontalAlignment="Left"
             Orientation="Vertical"/>
         <TextBox
@@ -46,7 +40,8 @@
             materialDesign:HintAssist.Hint="Húsnæði"
             materialDesign:HintAssist.HintOpacity=".26"
             DisplayMemberPath="Address"
-            IsEditable="True"/>
+            IsEditable="True"
+            ItemsSource="{Binding }"/>
         <materialDesign:PackIcon Kind="HomeEdit" Margin="34,163,0,0" Width="25" Height="25"/>
         <TextBox
             Width="320"
@@ -66,18 +61,13 @@
             Width="320"
             Height="41"
             materialDesign:HintAssist.Hint="Mikilvægi"
-            IsEditable="True"
             materialDesign:HintAssist.HintOpacity=".26" 
-            Margin="69,298,47.667,109.667">
-            <ComboBoxItem>
-                Lágt
-            </ComboBoxItem>
-            <ComboBoxItem>
-                Miðlungs
-            </ComboBoxItem>
-            <ComboBoxItem>
-                Hátt
-            </ComboBoxItem>
+            Margin="69,298,47.667,109.667"
+            IsEditable="True"
+            Text="{Binding .}">
+            <ComboBoxItem Content="Lágt"/>
+            <ComboBoxItem Content="Miðlungs"/>
+            <ComboBoxItem Content="Hátt"/>
         </ComboBox>
         <materialDesign:PackIcon Kind="PriorityHigh" Margin="34,308,0,0" Width="25" Height="25"/>
         <Button

@@ -11,59 +11,16 @@ namespace OkurleigaHF.Models
 {
     public class Property : INotifyPropertyChanged
     {
-        public Property(Property property)
-        {
-            IsAvailable = true;
-        }
-
         public Property()
         {
+            IsAvailable = true;
+            DateRented = DateTime.Now;
         }
 
         public int Id { get; set; }
-
-        private string _Address;
-        public string Address 
-        { 
-            get
-            {
-                return _Address;
-            }
-            set
-            {
-                _Address = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private string _ZipCode;
-        public string ZipCode 
-        { 
-            get
-            {
-                return _ZipCode;
-            }
-            set
-            {
-                _ZipCode = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private int _Bedrooms;
-        public int Bedrooms 
-        {   
-            get
-            {
-                return _Bedrooms;
-            }
-            set
-            {
-                _Bedrooms = value;
-                OnPropertyChanged();
-            }
-        }
+        public string Address { get; set; }
+        public string ZipCode { get; set; }
+        public int Bedrooms { get; set; }
 
         [NotMapped]
         public string AddressZipCode
@@ -74,47 +31,10 @@ namespace OkurleigaHF.Models
             }
         }
 
-        private int _PropertySize;
-        public int PropertySize 
-        { 
-            get
-            {
-                return _PropertySize;
-            }
-            set
-            {
-                _PropertySize = value;
-                OnPropertyChanged();
-            }
-        }
+        public int PropertySize { get; set; }
+        public decimal RentCost { get; set; }
 
-        private decimal _RentCost;
-        public decimal RentCost 
-        { 
-            get
-            {
-                return _RentCost;
-            }
-            set
-            {
-                _RentCost = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private bool _IsAvailable;
-        public bool IsAvailable 
-        { 
-            get
-            {
-                return _IsAvailable;
-            }
-            set
-            {
-                _IsAvailable = value;
-                OnPropertyChanged();
-            }
-        }
+        public bool IsAvailable { get; set; }
 
         public string IsAvailableToString
         {
@@ -131,42 +51,9 @@ namespace OkurleigaHF.Models
             }
         }
 
-        private DateTime? _DateRented;
-        public DateTime? DateRented 
-        { 
-            get
-            {
-                return _DateRented;
-            }
-            set
-            {
-                _DateRented = DateTime.Now;
-                OnPropertyChanged();
-            }
-        }
-
-        private DateTime? _DateReturned;
-        public DateTime? DateReturned 
-        { 
-            get
-            {
-                return _DateReturned;
-            }
-            set
-            {
-                _DateReturned = DateTime.Now;
-                OnPropertyChanged();
-            }
-        }
+        public DateTime? DateRented { get; set; }
+        public DateTime? DateReturned { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged([CallerMemberName]string name = "")
-        {
-            var changed = PropertyChanged;
-            if (changed == null)
-                return;
-            changed(this, new PropertyChangedEventArgs(name));
-        }
     }
 }
