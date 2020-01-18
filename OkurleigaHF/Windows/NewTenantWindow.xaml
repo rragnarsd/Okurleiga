@@ -1,17 +1,22 @@
 ﻿<Window
-    x:Class="OkurleigaHF.Windows.NewTenantWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:OkurleigaHF.Windows"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Models="clr-namespace:OkurleigaHF.Models"
+    x:Class="OkurleigaHF.Windows.NewTenantWindow"
     Title="Nýskrá leigjanda"
     Width="443.666"
     Height="478.333"
     Loaded="Window_Loaded"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
+    <Window.Resources>
+        <Models:ZeroToEmptyConverter x:Key="ZeroToEmptyConverter"/>
+        <materialDesign:NullableToVisibilityConverter x:Key="NullableToVisibilityConverter"/>
+    </Window.Resources>
     <Grid>
         <StackPanel
             Margin="2,61,-0.333,357.667"
@@ -49,18 +54,21 @@
             HorizontalAlignment="left"
             Orientation="Vertical">
             <TextBox
+                x:Name="TxtName"
                 Height="46"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Nafn"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding FullName}" />
             <TextBox
+                x:Name="TxtPhoneNumber"
                 Height="46"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Símanúmer"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                Text="{Binding Phone}" />
+                Text="{Binding Phone, Converter={StaticResource ZeroToEmptyConverter}}" SelectionOpacity="3" />
             <TextBox
+                x:Name="TxtEmail"
                 Height="46"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Netfang"
@@ -86,7 +94,7 @@
             VerticalAlignment="Top"
             Background="#FF1B5481"
             BorderBrush="#FF1B5481"
-            Click="btnBack_Click"
+            Click="BtnBack_Click"
             Content="Til baka" />
         <Button
             x:Name="btnSave"
@@ -96,7 +104,7 @@
             VerticalAlignment="Top"
             Background="#FF1B5481"
             BorderBrush="#FF1B5481"
-            Click="btnSave_Click"
+            Click="BtnSave_Click"
             Content="Vista" />
     </Grid>
 </Window>

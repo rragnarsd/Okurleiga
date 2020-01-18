@@ -2,6 +2,7 @@
 {
 
     using OkurleigaHF.Models;
+    using System.Collections.ObjectModel;
     using System.Data.Entity.Migrations;
 
     internal sealed class Configuration : DbMigrationsConfiguration<OkurleigaHF.EF.OkDBContext>

@@ -10,29 +10,30 @@
     Width="800"
     Height="450"
     mc:Ignorable="d"
-    WindowStartupLocation="CenterScreen">
+    WindowStartupLocation="CenterScreen"
+    ResizeMode="NoResize">
     
     <Grid>
         <Image Source="Pictures/building.jpg" Stretch="Fill"/>
         
         <Button
-            x:Name="btnProperties"
+            x:Name="BtnProperties"
             Width="213"
             Height="59"
             Margin="59,203,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Click="btnProperties_Click"
+            Click="BtnProperties_Click"
             Content="Húsnæði" Background="#FF1B5481" BorderBrush="#FF1B5481" FontSize="16"
             materialDesign:ButtonAssist.CornerRadius="2"/>
         <Button
-            x:Name="btnTenants"
+            x:Name="BtnTenants"
             Width="213"
             Height="59"
             Margin="58,283,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Click="btnTenants_Click"
+            Click="BtnTenants_Click"
             Content="Leigjendur" BorderBrush="#FF1B5481" Background="#FF1B5481" FontSize="16"
             materialDesign:ButtonAssist.CornerRadius="2"/>
     </Grid>

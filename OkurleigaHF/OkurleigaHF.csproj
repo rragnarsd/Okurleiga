@@ -78,6 +78,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\Incident.cs" />
+    <Compile Include="Models\ZeroToEmptyConverter.cs" />
     <Compile Include="PropertyWindow.xaml.cs">
       <DependentUpon>PropertyWindow.xaml</DependentUpon>
     </Compile>

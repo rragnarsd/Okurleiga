@@ -13,7 +13,7 @@
     mc:Ignorable="d">
     <Grid>
         <Button
-            x:Name="btnNewProp"
+            x:Name="BtnNewProp"
             Width="244"
             Height="37"
             Margin="33,53,0,0"
@@ -21,10 +21,10 @@
             VerticalAlignment="Top"
             Background="#FF1B5481"
             BorderBrush="#FF1B5481"
-            Click="btnNewProp_Click"
+            Click="BtnNewProp_Click"
             Content="Nýskrá leiguhúsnæði" />
         <Button
-            x:Name="btnNewIncident"
+            x:Name="BtnNewIncident"
             Width="244"
             Height="37"
             Margin="33,107,0,0"
@@ -32,7 +32,7 @@
             VerticalAlignment="Top"
             Background="#FF1B5481"
             BorderBrush="#FF1B5481"
-            Click="btnNewIncident_Click"
+            Click="BtnNewIncident_Click"
             Content="Atvikaskráning" />
         <DataGrid
             Width="818"
@@ -58,17 +58,17 @@
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
                                 <Button
-                                    x:Name="btnEdit"
+                                    x:Name="BtnEdit"
                                     Background="Transparent"
                                     BorderThickness="0"
-                                    Click="btnEdit_Click"
+                                    Click="BtnEdit_Click"
                                     Content="Breyta"
                                     Foreground="#FF0B13AD" />
                                 <Button
-                                    x:Name="btnDelete"
+                                    x:Name="BtnDelete"
                                     Background="Transparent"
                                     BorderThickness="0"
-                                    Click="btnDelete_Click"
+                                    Click="BtnDelete_Click"
                                     Content="Eyða"
                                     Foreground="#FFFF1313" />
                             </StackPanel>

@@ -64,29 +64,56 @@ namespace OkurleigaHF.Windows
             }
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void btnSave_Click(object sender, RoutedEventArgs e)
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            //SentInProperty.ZipCode = cbZipCode.SelectedIndex.ToString();
-            //SentInProperty.Bedrooms = cbBedrooms.SelectedIndex;
+            if (string.IsNullOrWhiteSpace(TxtAddress.Text))
+            {
+                MessageBox.Show("Verður að skrifa heimilisfang");
+            }
+            else if (string.IsNullOrWhiteSpace(cbZipCode.Text))
+            {
+                MessageBox.Show("Verður að velja póstnúmer");
+            }
+            else if (string.IsNullOrWhiteSpace(TxtSize.Text))
+            {
+                MessageBox.Show("Stærð á húsnæðinu?");
+            }
+            else if (string.IsNullOrWhiteSpace(cbBedrooms.Text))
+            {
+                MessageBox.Show("Verður að velja svefnherbergi");
+            }
+            else if (string.IsNullOrWhiteSpace(TxtRentCost.Text))
+            {
+                MessageBox.Show("Til að halda áfram verður mánaðarleg greiðsla að koma fram!");
+            }
+            else
+            {
+                //SentInProperty.ZipCode = cbZipCode.SelectedIndex.ToString();
+                //SentInProperty.Bedrooms = cbBedrooms.SelectedIndex;
 
-            SentInProperty.Address = CloneOfProperty.Address;
-            SentInProperty.ZipCode = CloneOfProperty.ZipCode;
-            SentInProperty.Bedrooms = CloneOfProperty.Bedrooms;
-            SentInProperty.PropertySize = CloneOfProperty.PropertySize;
-            SentInProperty.RentCost = CloneOfProperty.RentCost;
-            SentInProperty.IsAvailable = CloneOfProperty.IsAvailable;
-            SentInProperty.DateRented = CloneOfProperty.DateRented;
-            SentInProperty.DateReturned = CloneOfProperty.DateReturned;
+                SentInProperty.Address = CloneOfProperty.Address;
+                SentInProperty.ZipCode = CloneOfProperty.ZipCode;
+                SentInProperty.Bedrooms = CloneOfProperty.Bedrooms;
+                SentInProperty.PropertySize = CloneOfProperty.PropertySize;
+                SentInProperty.RentCost = CloneOfProperty.RentCost;
+                SentInProperty.IsAvailable = CloneOfProperty.IsAvailable;
+                SentInProperty.DateRented = CloneOfProperty.DateRented;
+                SentInProperty.DateReturned = CloneOfProperty.DateReturned;
 
-            SharedContext.DBContext.Properties.Add(SentInProperty);
-            SharedContext.DBContext.SaveChanges();
+                SharedContext.DBContext.Properties.Add(SentInProperty);
+                SharedContext.DBContext.SaveChanges();
 
-            this.Close();
+                this.Close();
+            }
+
+
+
+
         }
     }
 }

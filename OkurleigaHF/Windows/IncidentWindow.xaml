@@ -12,13 +12,13 @@
     mc:Ignorable="d">
     <Grid>
         <Button
-            x:Name="btnNewIncident"
+            x:Name="BtnNewIncident"
             Background="#FF1B5481"
             Width="189"
             Margin="33,53,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Click="btnNewIncident_Click"
+            Click="BtnNewIncident_Click"
             Content="Skrá nýtt atvik" 
             BorderBrush="#FF1B5481" />
         <DataGrid
@@ -43,17 +43,17 @@
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
                                 <Button
-                                    x:Name="btnEditIncident"
+                                    x:Name="BtnEditIncident"
                                     Background="Transparent"
                                     BorderThickness="0"
-                                    Click="btnEditIncident_Click"
+                                    Click="BtnEditIncident_Click"
                                     Content="Edit"
                                     Foreground="#FF0B13AD" />
                                 <Button
-                                    x:Name="btnDeleteIncident"
+                                    x:Name="BtnDeleteIncident"
                                     Background="Transparent"
                                     BorderThickness="0"
-                                    Click="btnDeleteIncident_Click"
+                                    Click="BtnDeleteIncident_Click"
                                     Content="Delete"
                                     Foreground="#FFFF1313" />
                             </StackPanel>

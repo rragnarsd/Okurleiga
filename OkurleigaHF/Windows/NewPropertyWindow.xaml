@@ -12,6 +12,10 @@
     Height="478.333"
     Loaded="Window_Loaded"
     mc:Ignorable="d">
+    <Window.Resources>
+        <models:ZeroToEmptyConverter x:Key="ZeroToEmptyConverter" />
+        <materialDesign:NotZeroConverter x:Key="NotZeroConverter" />
+    </Window.Resources>
 
     <Grid Margin="0,1,-0.333,-1.333">
         <StackPanel
@@ -50,6 +54,7 @@
             HorizontalAlignment="Left"
             Orientation="Vertical">
             <TextBox
+                x:Name="TxtAddress"
                 Width="328"
                 Height="44"
                 HorizontalAlignment="Center"
@@ -169,12 +174,13 @@
                 <ComboBoxItem Content="900" />
             </ComboBox>
             <TextBox
+                x:Name="TxtSize"
                 Height="44"
                 Margin="0,0,1,0"
                 VerticalAlignment="Center"
                 materialDesign:HintAssist.Hint="Stærð"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                Text="{Binding PropertySize}" />
+                Text="{Binding PropertySize, Converter={StaticResource ZeroToEmptyConverter}}" />
 
             <ComboBox
                 x:Name="cbBedrooms"
@@ -195,6 +201,7 @@
                 <ComboBoxItem Content="10" />
             </ComboBox>
             <TextBox
+                x:Name="TxtRentCost"
                 Height="44"
                 Margin="0,0,1,0"
                 VerticalAlignment="Center"
@@ -213,24 +220,24 @@
             Margin="32,212,0,0"
             Kind="ArrowTopLeftBottomRight" />
         <Button
-            x:Name="btnBack"
+            x:Name="BtnBack"
             Width="108"
             Margin="156,354,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#FF1B5481"
             BorderBrush="#FF1B5481"
-            Click="btnBack_Click"
+            Click="BtnBack_Click"
             Content="Til baka" />
         <Button
-            x:Name="btnSave"
+            x:Name="BtnSave"
             Width="108"
             Margin="286,354,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#FF1B5481"
             BorderBrush="#FF1B5481"
-            Click="btnSave_Click"
+            Click="BtnSave_Click"
             Content="Vista" />
 
     </Grid>

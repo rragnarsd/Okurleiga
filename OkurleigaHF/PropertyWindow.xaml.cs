@@ -1,7 +1,6 @@
 ﻿using OkurleigaHF.EF;
 using OkurleigaHF.Models;
 using OkurleigaHF.Windows;
-using System;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Windows;
@@ -32,7 +31,7 @@ namespace OkurleigaHF
             this.DataContext = Properties;
         }
 
-        private void btnNewProp_Click(object sender, RoutedEventArgs e)
+        private void BtnNewProp_Click(object sender, RoutedEventArgs e)
         {
             Property p = new Property();
 
@@ -41,7 +40,7 @@ namespace OkurleigaHF
             win.ShowDialog();
         }
 
-        private void btnNewIncident_Click(object sender, RoutedEventArgs e)
+        private void BtnNewIncident_Click(object sender, RoutedEventArgs e)
         {
             Incident i = new Incident();
 
@@ -50,7 +49,7 @@ namespace OkurleigaHF
             win.ShowDialog();
         }
 
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             Property p = ((sender as Button).DataContext) as Property;
 
@@ -59,7 +58,7 @@ namespace OkurleigaHF
 
         }
 
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
             Property p = ((sender as Button).DataContext) as Property;
 
@@ -67,6 +66,6 @@ namespace OkurleigaHF
             SharedContext.DBContext.SaveChanges();
         }
 
-        
+
     }
 }

@@ -12,7 +12,7 @@
     mc:Ignorable="d">
     <Grid>
         <Button
-            x:Name="btnNewTenant"
+            x:Name="BtnNewTenant"
             Background="#FF1B5481"
             BorderBrush="#FF1B5481"
             Width="244"
@@ -20,7 +20,7 @@
             Margin="33,53,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Click="btnNewTenant_Click"
+            Click="BtnNewTenant_Click"
             Content="Nýskrá leigjanda" 
             />
         <DataGrid
@@ -43,8 +43,8 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Button x:Name="btnEdit" Content="Breyta" Background="Transparent" Foreground="#FF0B13AD" BorderThickness="0" Click="btnEdit_Click"/>
-                                <Button x:Name="btnDelete" Content="Eyða" Background="Transparent" Foreground="#FFFF1313" BorderThickness="0" Click="btnDelete_Click"/>
+                                <Button x:Name="BtnEdit" Content="Breyta" Background="Transparent" Foreground="#FF0B13AD" BorderThickness="0" Click="BtnEdit_Click"/>
+                                <Button x:Name="BtnDelete" Content="Eyða" Background="Transparent" Foreground="#FFFF1313" BorderThickness="0" Click="BtnDelete_Click"/>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

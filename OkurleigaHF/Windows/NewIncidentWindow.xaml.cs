@@ -28,7 +28,8 @@ namespace OkurleigaHF.Windows
                 Description = SentInIncident.Description,
                 IsActive = SentInIncident.IsActive,
                 IncidentReportedDate = SentInIncident.IncidentReportedDate,
-                IncidentClosedDate = SentInIncident.IncidentClosedDate
+                IncidentClosedDate = SentInIncident.IncidentClosedDate,
+                Priority = SentInIncident.Priority
             };
         }
 
@@ -37,24 +38,47 @@ namespace OkurleigaHF.Windows
             this.DataContext = CloneOfIncident;
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void btnSave_Click(object sender, RoutedEventArgs e)
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            SentInIncident.Title = CloneOfIncident.Title;
-            SentInIncident.Property = CloneOfIncident.Property;
-            SentInIncident.Description = CloneOfIncident.Description;
-            SentInIncident.IsActive = CloneOfIncident.IsActive;
-            SentInIncident.IncidentReportedDate = CloneOfIncident.IncidentReportedDate;
-            SentInIncident.IncidentClosedDate = CloneOfIncident.IncidentClosedDate;
+            if (string.IsNullOrWhiteSpace(TxtTitle.Text))
+            {
+                MessageBox.Show("Verður að skrifa titill");
+            }
+            //else if (string.IsNullOrWhiteSpace(cbProperty.Text))
+            //{
+            //    MessageBox.Show("Verður að velja húsnæði");
+            //}
+            else if (string.IsNullOrWhiteSpace(TxtDescription.Text))
+            {
+                MessageBox.Show("Það vantar lýsingu á atvikinu");
+            }
+            else if (string.IsNullOrWhiteSpace(cbPriority.Text))
+            {
+                MessageBox.Show("Hversu mikilvægt er atvikið?");
+            }
+            else
+            {
+                SentInIncident.Title = CloneOfIncident.Title;
+                SentInIncident.Property = CloneOfIncident.Property;
+                SentInIncident.Description = CloneOfIncident.Description;
+                SentInIncident.IsActive = CloneOfIncident.IsActive;
+                SentInIncident.IncidentReportedDate = CloneOfIncident.IncidentReportedDate;
+                SentInIncident.IncidentClosedDate = CloneOfIncident.IncidentClosedDate;
+                SentInIncident.Priority = CloneOfIncident.Priority;
 
-            SharedContext.DBContext.Incidents.Add(SentInIncident);
-            SharedContext.DBContext.SaveChanges();
+                SharedContext.DBContext.Incidents.Add(SentInIncident);
+                SharedContext.DBContext.SaveChanges();
 
-            this.Close();
+                this.Close();
+            }
+
+
+
         }
     }
 }

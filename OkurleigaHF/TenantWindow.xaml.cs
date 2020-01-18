@@ -1,21 +1,10 @@
 ﻿using OkurleigaHF.EF;
 using OkurleigaHF.Models;
 using OkurleigaHF.Windows;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace OkurleigaHF
 {
@@ -42,7 +31,7 @@ namespace OkurleigaHF
             this.DataContext = Tenants;
         }
 
-        private void btnNewTenant_Click(object sender, RoutedEventArgs e)
+        private void BtnNewTenant_Click(object sender, RoutedEventArgs e)
         {
             Tenant t = new Tenant();
 
@@ -51,7 +40,7 @@ namespace OkurleigaHF
             win.ShowDialog();
         }
 
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             Tenant t = ((sender as Button).DataContext) as Tenant;
 
@@ -59,7 +48,7 @@ namespace OkurleigaHF
             win.ShowDialog();
         }
 
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
             Tenant t = ((sender as Button).DataContext) as Tenant;
 
