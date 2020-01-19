@@ -76,7 +76,6 @@ C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\bin\Debug\EntityFramework
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\bin\Debug\MaterialDesignColors.pdb
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\MainWindow.g.cs
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\PropertyWindow.g.cs
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\TenantWindow.g.cs
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\Windows\IncidentWindow.g.cs
@@ -88,7 +87,6 @@ C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\GeneratedIntern
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF_MarkupCompile.cache
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF_MarkupCompile.lref
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\App.baml
-C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\MainWindow.baml
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\PropertyWindow.baml
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\TenantWindow.baml
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\Windows\IncidentWindow.baml
@@ -102,3 +100,7 @@ C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF.csp
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF.csproj.CopyComplete
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF.exe
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\OkurleigaHF.pdb
+C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\Design\NewLoginWindow.g.cs
+C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\MainWindow.g.cs
+C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\Design\NewLoginWindow.baml
+C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\obj\Debug\MainWindow.baml

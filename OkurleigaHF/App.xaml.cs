@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OkurleigaHF.Design;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,10 @@ namespace OkurleigaHF
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            NewLoginWindow wnd = new NewLoginWindow();
+            wnd.Show();
+        }
     }
 }

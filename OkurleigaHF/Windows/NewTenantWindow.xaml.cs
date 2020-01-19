@@ -27,7 +27,7 @@ namespace OkurleigaHF.Windows
                 FullName = SentInTenant.FullName,
                 Email = SentInTenant.Email,
                 Phone = SentInTenant.Phone,
-                PropertyForRent = SentInTenant.PropertyForRent
+                PropertyForRent = sentInTenant.PropertyForRent
             };
 
             Properties = new ObservableCollection<Property>();

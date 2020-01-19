@@ -93,12 +93,12 @@ namespace OkurleigaHF.Windows
             }
             else
             {
-                //SentInProperty.ZipCode = cbZipCode.SelectedIndex.ToString();
-                //SentInProperty.Bedrooms = cbBedrooms.SelectedIndex;
+                SentInProperty.ZipCode = cbZipCode.SelectedIndex.ToString();
+                SentInProperty.Bedrooms = cbBedrooms.SelectedIndex;
 
                 SentInProperty.Address = CloneOfProperty.Address;
-                SentInProperty.ZipCode = CloneOfProperty.ZipCode;
-                SentInProperty.Bedrooms = CloneOfProperty.Bedrooms;
+                //SentInProperty.ZipCode = CloneOfProperty.ZipCode;
+                //SentInProperty.Bedrooms = CloneOfProperty.Bedrooms;
                 SentInProperty.PropertySize = CloneOfProperty.PropertySize;
                 SentInProperty.RentCost = CloneOfProperty.RentCost;
                 SentInProperty.IsAvailable = CloneOfProperty.IsAvailable;
