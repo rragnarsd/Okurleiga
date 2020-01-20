@@ -10,6 +10,7 @@
     Height="427.999"
     Loaded="Window_Loaded"
     ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Grid>
         <Button
@@ -33,7 +34,7 @@
             ItemsSource="{Binding}">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=Title}" Header="Titill" />
-                <DataGridTextColumn Binding="{Binding Path=Property}" Header="Íbúð" />
+                <DataGridTextColumn Binding="{Binding Path=PropertyForRent}" Header="Íbúð" />
                 <DataGridTextColumn Binding="{Binding Path=Priority}" Header="Mikilvægi" />
                 <DataGridTextColumn Binding="{Binding Path=IsActiveToString}" Header="Staða" />
                 <DataGridTemplateColumn>

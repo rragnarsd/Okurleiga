@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Notandi\source\repos\Okurleiga_hf\OkurleigaHF\App.xaml
-8286465524
+10-2066643642
 
-201384639515
+22322051962
 211612135719
-Design\NewLoginWindow.xaml;MainWindow.xaml;PropertyWindow.xaml;TenantWindow.xaml;Windows\IncidentWindow.xaml;Windows\NewIncidentWindow.xaml;Windows\NewPropertyWindow.xaml;Windows\NewTenantWindow.xaml;
+Design\CustomMessageBox.xaml;Design\msg.xaml;Design\NewLoginWindow.xaml;MainWindow.xaml;PropertyWindow.xaml;TenantWindow.xaml;Windows\IncidentWindow.xaml;Windows\NewIncidentWindow.xaml;Windows\NewPropertyWindow.xaml;Windows\NewTenantWindow.xaml;
 
 False
 

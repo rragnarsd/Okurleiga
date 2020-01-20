@@ -12,7 +12,8 @@
     Height="478.333"
     Loaded="Window_Loaded"
     mc:Ignorable="d"
-    ResizeMode="NoResize">
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <models:ZeroToEmptyConverter x:Key="ZeroToEmptyConverter" />
         <materialDesign:NotZeroConverter x:Key="NotZeroConverter" />

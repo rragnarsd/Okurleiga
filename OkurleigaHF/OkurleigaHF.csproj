@@ -77,6 +77,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Design\CustomMessageBox.xaml.cs">
+      <DependentUpon>CustomMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Design\msg.xaml.cs">
+      <DependentUpon>msg.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Design\NewLoginWindow.xaml.cs">
       <DependentUpon>NewLoginWindow.xaml</DependentUpon>
     </Compile>
@@ -100,6 +106,14 @@
     <Compile Include="Windows\NewTenantWindow.xaml.cs">
       <DependentUpon>NewTenantWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Design\CustomMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Design\msg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Design\NewLoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

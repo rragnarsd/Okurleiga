@@ -18,6 +18,7 @@ namespace OkurleigaHF
         {
             NewLoginWindow wnd = new NewLoginWindow();
             wnd.Show();
+
         }
     }
 }

@@ -9,9 +9,9 @@
     Width="896.581"
     Height="498.126"
     Loaded="Window_Loaded"
+    ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
-    mc:Ignorable="d"
-    ResizeMode="NoResize">
+    mc:Ignorable="d">
     <Grid>
         <Button
             x:Name="BtnNewProp"

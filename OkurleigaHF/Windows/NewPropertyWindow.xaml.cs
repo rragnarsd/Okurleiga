@@ -93,19 +93,21 @@ namespace OkurleigaHF.Windows
             }
             else
             {
-                SentInProperty.ZipCode = cbZipCode.SelectedIndex.ToString();
-                SentInProperty.Bedrooms = cbBedrooms.SelectedIndex;
+                SentInProperty.ZipCode = (cbZipCode.SelectedItem as ComboBoxItem).Content.ToString();
+                SentInProperty.Bedrooms = int.Parse((cbBedrooms.SelectedItem as ComboBoxItem).Content.ToString());
 
                 SentInProperty.Address = CloneOfProperty.Address;
-                //SentInProperty.ZipCode = CloneOfProperty.ZipCode;
-                //SentInProperty.Bedrooms = CloneOfProperty.Bedrooms;
                 SentInProperty.PropertySize = CloneOfProperty.PropertySize;
                 SentInProperty.RentCost = CloneOfProperty.RentCost;
                 SentInProperty.IsAvailable = CloneOfProperty.IsAvailable;
                 SentInProperty.DateRented = CloneOfProperty.DateRented;
                 SentInProperty.DateReturned = CloneOfProperty.DateReturned;
 
-                SharedContext.DBContext.Properties.Add(SentInProperty);
+                if (SentInProperty.Id == 0)
+                {
+                    SharedContext.DBContext.Properties.Add(SentInProperty);
+                }
+
                 SharedContext.DBContext.SaveChanges();
 
                 this.Close();

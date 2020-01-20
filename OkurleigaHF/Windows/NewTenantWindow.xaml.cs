@@ -20,6 +20,8 @@ namespace OkurleigaHF.Windows
         {
             InitializeComponent();
 
+            //cbPropertyAddress.ItemsSource = typeof(Property).GetProperties();
+
             SentInTenant = sentInTenant;
 
             CloneOfTenant = new Tenant()
@@ -72,7 +74,11 @@ namespace OkurleigaHF.Windows
                 SentInTenant.Phone = CloneOfTenant.Phone;
                 //SentInTenant.PropertyForRent = CloneOfTenant.PropertyForRent;
 
-                SharedContext.DBContext.Tenants.Add(SentInTenant);
+                if (SentInTenant.Id == 0)
+                {
+                    SharedContext.DBContext.Tenants.Add(SentInTenant);
+                }
+
                 SharedContext.DBContext.SaveChanges();
 
                 this.Close();

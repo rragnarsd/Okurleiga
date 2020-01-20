@@ -32,8 +32,17 @@ namespace OkurleigaHF.Design
 
         private void BtnSignIn_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow win = new MainWindow();
-            win.ShowDialog();
+            if (TxtEmail.Text == "okurleiga@ntv.is" & PwPassword.Password == "12345")
+            {
+                MainWindow win = new MainWindow();
+                win.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Vinsamlegast reyndu aftur");
+            }
+
         }
     }
 }

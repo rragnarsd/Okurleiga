@@ -1,0 +1,51 @@
+﻿<Window x:Class="OkurleigaHF.Design.CustomMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:OkurleigaHF.Design"
+        mc:Ignorable="d"
+        Title="CustomMessageBox" Height="576" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <materialDesign:DialogHost BorderBrush="{DynamicResource MaterialDesignDivider}">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid>
+                    <StackPanel Orientation="Horizontal"  Margin="15">
+                        <materialDesign:PackIcon Kind="Folder" Foreground="{StaticResource PrimaryHueMidBrush}" Width="50" Height="50"/>
+                        <TextBlock Foreground="Gray" Width="200" Margin="15 5" TextWrapping="Wrap">
+                            .............................
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="15">
+                        <Button Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Style="{DynamicResource MaterialDesignFlatButton}" Margin="4" VerticalAlignment="Center">
+                            more.......
+                        </Button>
+                        <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{DynamicResource MaterialDesignFlatButton}" Margin="4" VerticalAlignment="Center">
+                            and more.......
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+            <Grid>
+                <StackPanel Width="200" HorizontalAlignment="Left" Background="#FF1B5481">
+                    <Grid Height="150" Background="White">
+
+                    </Grid>
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Foreground="White">
+                        <StackPanel Orientation="Horizontal" Height="30">
+                            <materialDesign:PackIcon Kind="InfoOutline" Width="20" Height="20" VerticalAlignment="Center" Foreground="White" Margin="0,5"/>
+                            <TextBlock Text="Info" Margin="20 0" FontSize="15" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}">
+                        <StackPanel Orientation="Horizontal" Height="30">
+                            <materialDesign:PackIcon Kind="HouseCircleOutline" Width="20" Height="20" VerticalAlignment="Center" Foreground="White" Margin="0,5"/>
+                            <TextBlock Text="Music" Margin="20 0" FontSize="15" VerticalAlignment="Center" Foreground="White"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </materialDesign:DialogHost>
+    </Grid>
+</Window>

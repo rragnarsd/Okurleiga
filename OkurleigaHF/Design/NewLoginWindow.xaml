@@ -8,7 +8,9 @@
         mc:Ignorable="d"
         Loaded="Window_Loaded"
         WindowStartupLocation="CenterScreen"
-        Height="500" Width="350" ResizeMode="NoResize" WindowStyle="None">
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Height="500" Width="350" >
     <Grid>
         <Rectangle Height="280" VerticalAlignment="Top">
             <Rectangle.Fill>
@@ -28,10 +30,10 @@
         <Grid Width="280" Height="240" VerticalAlignment="Bottom" Margin="0,100">
             <TextBlock Text="Okurleiga.hf" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Foreground="Gray" FontSize="18"/>
             <StackPanel VerticalAlignment="Center" Margin="10">
-                <TextBox materialDesign:HintAssist.Hint="Netfang" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10" FontSize="16"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Lykilorð" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10" FontSize="16"/>
+                <TextBox x:Name="TxtEmail" materialDesign:HintAssist.Hint="Netfang" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10" FontSize="16"/>
+                <PasswordBox x:Name="PwPassword" materialDesign:HintAssist.Hint="Lykilorð" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10" FontSize="16"/>
             </StackPanel>
         </Grid>
-        <Button x:Name="BtnSignIn" VerticalAlignment="Bottom" Margin="100,0,100,85" Width="150" Content="Innskráning" Background="#FF1B5481" BorderBrush="#FF1B5481" Click="BtnSignIn_Click"/>
+        <Button x:Name="BtnSignIn" VerticalAlignment="Bottom" Margin="100,0,100,85" Width="150" Content="Innskráning" Background="#FF1B5481" BorderBrush="#FF1B5481" Click="BtnSignIn_Click" IsDefault="True"/>
     </Grid>
 </Window>

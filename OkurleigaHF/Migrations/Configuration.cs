@@ -2,7 +2,7 @@
 {
 
     using OkurleigaHF.Models;
-    using System.Collections.ObjectModel;
+    using System;
     using System.Data.Entity.Migrations;
 
     internal sealed class Configuration : DbMigrationsConfiguration<OkurleigaHF.EF.OkDBContext>
@@ -19,6 +19,8 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
+
+
 
 
             Property p1 = new Property()
@@ -186,28 +188,39 @@
                 t5
         );
 
-            //Incident i1 = new Incident()
-            //{
-            //    Title = "Baðherbergishurð",
-            //    Property = p7,
-            //    Description = "Hurð inn á baði er brotin",
-            //    IsActive = false,
-            //    IncidentClosedDate = new DateTime(2020, 01, 03)
-            //};
+            Incident i1 = new Incident()
+            {
+                Title = "Baðherbergishurð",
+                Property= p7,
+                Description = "Hurð inn á baði er brotin",
+                IsActive = false,
+                //Priority = ,
+                IncidentClosedDate = new DateTime(2020, 01, 03)
+            };
 
-            //Incident i2 = new Incident()
-            //{
-            //    Title = "Eldhúsvifta",
-            //    Property = p3,
-            //    Description = "Viftan inn í eldhúsi virkar ekki",
-            //    IsActive = true
-            //};
+            Incident i2 = new Incident()
+            {
+                Title = "Eldhúsvifta",
+                Property = p3,
+                Description = "Viftan inn í eldhúsi virkar ekki",
+                IsActive = true
+            };
 
-            //context.Incidents.AddOrUpdate(
-            //    i => i.Property,
-            //    i1,
-            //    i2
-            //    );
+            Incident i3 = new Incident()
+            {
+                Title = "Parket",
+                Property = p1,
+                Description = "Það varð vatnsóhapp, parketið bólgið inní stofu",
+                IsActive = false,
+                IncidentClosedDate = new DateTime(2020, 01, 18)
+            };
+
+            context.Incidents.AddOrUpdate(
+                i => i.Title,
+                i1,
+                i2,
+                i3
+                );
 
             context.SaveChanges();
         }

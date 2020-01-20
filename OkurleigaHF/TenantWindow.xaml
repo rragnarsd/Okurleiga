@@ -10,7 +10,8 @@
     Height="427.999"
     Loaded="Window_Loaded"
     mc:Ignorable="d"
-    ResizeMode="NoResize">
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen">
     <Grid>
         <Button
             x:Name="BtnNewTenant"

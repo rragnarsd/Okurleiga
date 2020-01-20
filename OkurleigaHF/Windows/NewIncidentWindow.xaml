@@ -12,7 +12,8 @@
     Height="478.333"
     Loaded="Window_Loaded"
     mc:Ignorable="d"
-    ResizeMode="NoResize">
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen">
 
     <Grid>
         <TextBlock
@@ -52,7 +53,7 @@
             materialDesign:HintAssist.HintOpacity=".26"
             DisplayMemberPath="Address"
             IsEditable="True"
-            ItemsSource="{Binding}" />
+            ItemsSource="{Binding .}" />
         <materialDesign:PackIcon
             Width="25"
             Height="25"
