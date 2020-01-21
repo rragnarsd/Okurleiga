@@ -38,7 +38,7 @@ namespace OkurleigaHF.Models
         public DateTime IncidentReportedDate { get; set; }
         public DateTime? IncidentClosedDate { get; set; }
         public string Priority { get; set; }
-
+        public object PropertyForRent { get; internal set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

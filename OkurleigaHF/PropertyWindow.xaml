@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:OkurleigaHF"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     Title="Húsnæði"
     Width="896.581"
     Height="498.126"
@@ -12,30 +13,23 @@
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
+
     <Grid>
-        <Button
+        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
             x:Name="BtnNewProp"
             Width="244"
             Height="37"
             Margin="33,53,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF1B5481"
-            BorderBrush="#FF1B5481"
             Click="BtnNewProp_Click"
-            Content="Nýskrá leiguhúsnæði" />
-        <Button
+            Content="Nýskrá leiguhúsnæði"/>
+        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
             x:Name="BtnNewIncident"
             Width="244"
             Height="37"
             Margin="33,107,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF1B5481"
-            BorderBrush="#FF1B5481"
             Click="BtnNewIncident_Click"
-            Content="Atvikaskráning" />
-        <DataGrid
+            Content="Atvikaskráning"/>
+        <DataGrid 
             Width="818"
             Height="244"
             Margin="40,178,0,0"

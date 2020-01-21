@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:OkurleigaHF.Windows"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     Title="Atvikaskráning"
     Width="808"
     Height="427.999"
@@ -13,14 +14,11 @@
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Grid>
-        <Button
+        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
             x:Name="BtnNewIncident"
-            Width="189"
+            Width="244"
+            Height="37"
             Margin="33,53,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF1B5481"
-            BorderBrush="#FF1B5481"
             Click="BtnNewIncident_Click"
             Content="Skrá nýtt atvik" />
         <DataGrid
@@ -34,7 +32,7 @@
             ItemsSource="{Binding}">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=Title}" Header="Titill" />
-                <DataGridTextColumn Binding="{Binding Path=PropertyForRent}" Header="Íbúð" />
+                <DataGridTextColumn Binding="{Binding Path=Property.Address}" Header="Íbúð" />
                 <DataGridTextColumn Binding="{Binding Path=Priority}" Header="Mikilvægi" />
                 <DataGridTextColumn Binding="{Binding Path=IsActiveToString}" Header="Staða" />
                 <DataGridTemplateColumn>

@@ -15,7 +15,7 @@ namespace OkurleigaHF.Windows
 
         public ObservableCollection<Incident> Incidents { get; set; }
 
-        public IncidentWindow(Incident i)
+        public IncidentWindow()
         {
             InitializeComponent();
 
@@ -24,7 +24,6 @@ namespace OkurleigaHF.Windows
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //SharedContext.DBContext.Incidents.Load();
             SharedContext.DBContext.Incidents.Include(x => x.Property).Load();
 
             Incidents = SharedContext.DBContext.Incidents.Local;

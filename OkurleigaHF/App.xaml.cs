@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
+
 namespace OkurleigaHF
 {
     /// <summary>
@@ -18,6 +19,11 @@ namespace OkurleigaHF
         {
             NewLoginWindow wnd = new NewLoginWindow();
             wnd.Show();
+
+        }
+
+        private void Setter_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

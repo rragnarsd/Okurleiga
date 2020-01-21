@@ -15,7 +15,6 @@ namespace OkurleigaHF.Windows
         public Incident SentInIncident { get; set; }
         public Incident CloneOfIncident { get; set; }
 
-        public ObservableCollection<Incident> Incidents { get; set; }
         public ObservableCollection<Property> Properties { get; set; }
 
         public NewIncidentWindow(Incident sentInIncident)

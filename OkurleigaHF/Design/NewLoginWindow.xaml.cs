@@ -32,7 +32,7 @@ namespace OkurleigaHF.Design
 
         private void BtnSignIn_Click(object sender, RoutedEventArgs e)
         {
-            if (TxtEmail.Text == "okurleiga@ntv.is" & PwPassword.Password == "12345")
+            if (TxtEmail.Text == "okurleiga@okurleiga.is" & PwPassword.Password == "12345")
             {
                 MainWindow win = new MainWindow();
                 win.ShowDialog();

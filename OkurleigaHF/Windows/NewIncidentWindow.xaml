@@ -13,7 +13,8 @@
     Loaded="Window_Loaded"
     mc:Ignorable="d"
     ResizeMode="NoResize"
-    WindowStartupLocation="CenterScreen">
+    WindowStartupLocation="CenterScreen"
+    FocusManager.FocusedElement="{Binding ElementName=TxtTitle}">
 
     <Grid>
         <TextBlock
@@ -84,7 +85,6 @@
             Margin="69,298,47.667,109.667"
             materialDesign:HintAssist.Hint="Mikilvægi"
             materialDesign:HintAssist.HintOpacity=".26"
-            IsEditable="True"
             Text="{Binding Priority}">
             <ComboBoxItem Content="Lágt" />
             <ComboBoxItem Content="Miðlungs" />
@@ -95,24 +95,18 @@
             Height="25"
             Margin="34,308,0,0"
             Kind="PriorityHigh" />
-        <Button
+        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
             x:Name="BtnBack"
             Width="108"
+            Height="32"
             Margin="155,357,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF1B5481"
-            BorderBrush="#FF1B5481"
             Click="BtnBack_Click"
             Content="Til baka" />
-        <Button
+        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
             x:Name="BtnSave"
             Width="108"
+            Height="32"
             Margin="285,357,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF1B5481"
-            BorderBrush="#FF1B5481"
             Click="BtnSave_Click"
             Content="Vista" />
     </Grid>

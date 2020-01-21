@@ -10,10 +10,11 @@
     Title="Nýskrá leiguhúsnæði"
     Width="443.666"
     Height="478.333"
+    FocusManager.FocusedElement="{Binding ElementName=TxtAddress}"
     Loaded="Window_Loaded"
-    mc:Ignorable="d"
     ResizeMode="NoResize"
-    WindowStartupLocation="CenterScreen">
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
     <Window.Resources>
         <models:ZeroToEmptyConverter x:Key="ZeroToEmptyConverter" />
         <materialDesign:NotZeroConverter x:Key="NotZeroConverter" />
@@ -224,23 +225,20 @@
         <Button
             x:Name="BtnBack"
             Width="108"
+            Height="32"
             Margin="156,354,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF1B5481"
-            BorderBrush="#FF1B5481"
+            materialDesign:ButtonAssist.CornerRadius="5"
             Click="BtnBack_Click"
-            Content="Til baka" />
+            Content="Til baka"
+            Style="{StaticResource BtnButtons}" />
         <Button
             x:Name="BtnSave"
             Width="108"
+            Height="32"
             Margin="286,354,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF1B5481"
-            BorderBrush="#FF1B5481"
+            materialDesign:ButtonAssist.CornerRadius="5"
             Click="BtnSave_Click"
-            Content="Vista" />
-
+            Content="Vista"
+            Style="{StaticResource BtnButtons}" />
     </Grid>
 </Window>

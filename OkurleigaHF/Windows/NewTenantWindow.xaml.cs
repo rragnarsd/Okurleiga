@@ -20,8 +20,6 @@ namespace OkurleigaHF.Windows
         {
             InitializeComponent();
 
-            //cbPropertyAddress.ItemsSource = typeof(Property).GetProperties();
-
             SentInTenant = sentInTenant;
 
             CloneOfTenant = new Tenant()

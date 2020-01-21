@@ -44,7 +44,7 @@ namespace OkurleigaHF
         {
             Incident i = new Incident();
 
-            IncidentWindow win = new IncidentWindow(i);
+            IncidentWindow win = new IncidentWindow();
 
             win.ShowDialog();
         }
