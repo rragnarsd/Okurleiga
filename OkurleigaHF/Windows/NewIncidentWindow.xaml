@@ -19,7 +19,7 @@
     <Grid>
         <TextBlock
             Width="130"
-            Margin="0,67,153.667,354.667"
+            Margin="0,62,154,362"
             HorizontalAlignment="Right"
             VerticalAlignment="Center"
             FontSize="20"
@@ -30,25 +30,24 @@
             Margin="31,30,0,38.667"
             HorizontalAlignment="Left"
             Orientation="Vertical" />
-        <TextBox
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
             x:Name="TxtTitle"
             Height="46"
-            Margin="69,104,47.667,298.667"
+            Margin="69,102,48,302"
             VerticalAlignment="Center"
             materialDesign:HintAssist.Hint="Titill"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-            Text="{Binding Title}" />
+            Text="{Binding Title}"/>
         <materialDesign:PackIcon
             Width="25"
             Height="25"
-            Margin="34,121,0,0"
+            Margin="34,118,0,0"
             Kind="FormatTitle" />
 
         <ComboBox
             x:Name="cbProperty"
             Width="320"
             Height="41"
-            Margin="69,153,0,254.667"
+            Margin="69,157,0,252"
             HorizontalAlignment="Left"
             materialDesign:HintAssist.Hint="Húsnæði"
             materialDesign:HintAssist.HintOpacity=".26"
@@ -58,13 +57,13 @@
         <materialDesign:PackIcon
             Width="25"
             Height="25"
-            Margin="34,163,0,0"
+            Margin="34,166,0,0"
             Kind="HomeEdit" />
         <TextBox
             x:Name="TxtDescription"
             Width="320"
             Height="82"
-            Margin="69,208,0,0"
+            Margin="69,215,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             materialDesign:HintAssist.Hint="Description"
@@ -76,16 +75,17 @@
         <materialDesign:PackIcon
             Width="25"
             Height="25"
-            Margin="34,213,0,0"
+            Margin="34,220,0,0"
             Kind="AboutVariant" />
         <ComboBox
             x:Name="cbPriority"
             Width="320"
             Height="41"
-            Margin="69,298,47.667,109.667"
+            Margin="69,302,0,107"
             materialDesign:HintAssist.Hint="Mikilvægi"
             materialDesign:HintAssist.HintOpacity=".26"
-            Text="{Binding Priority}">
+            Text="{Binding Priority}"
+            IsEditable="True" HorizontalAlignment="Left">
             <ComboBoxItem Content="Lágt" />
             <ComboBoxItem Content="Miðlungs" />
             <ComboBoxItem Content="Hátt" />
@@ -93,20 +93,21 @@
         <materialDesign:PackIcon
             Width="25"
             Height="25"
-            Margin="34,308,0,0"
+            Margin="34,311,0,0"
             Kind="PriorityHigh" />
-        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
+        <Button Style="{StaticResource BtnButtons}"
             x:Name="BtnBack"
-            Width="108"
-            Height="32"
-            Margin="155,357,0,0"
+            Width="110"
+            Height="35"
+            Margin="155,363,0,0"
             Click="BtnBack_Click"
-            Content="Til baka" />
-        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
+            Content="Til baka"
+            Background="White" Foreground="Black"/>
+        <Button Style="{StaticResource BtnButtons}"
             x:Name="BtnSave"
-            Width="108"
-            Height="32"
-            Margin="285,357,0,0"
+            Width="110"
+            Height="35"
+            Margin="285,363,0,0"
             Click="BtnSave_Click"
             Content="Vista" />
     </Grid>

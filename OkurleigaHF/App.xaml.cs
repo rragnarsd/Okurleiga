@@ -21,10 +21,5 @@ namespace OkurleigaHF
             wnd.Show();
 
         }
-
-        private void Setter_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

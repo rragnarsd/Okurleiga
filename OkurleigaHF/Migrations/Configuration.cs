@@ -191,10 +191,9 @@
             Incident i1 = new Incident()
             {
                 Title = "Baðherbergishurð",
-                Property= p7,
+                Property = p7,
                 Description = "Hurð inn á baði er brotin",
                 IsActive = false,
-                //Priority = ,
                 IncidentClosedDate = new DateTime(2020, 01, 03)
             };
 

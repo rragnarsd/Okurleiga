@@ -3,7 +3,6 @@ using OkurleigaHF.Models;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace OkurleigaHF.Windows
 {
@@ -73,9 +72,7 @@ namespace OkurleigaHF.Windows
             else
             {
                 SentInIncident.Property = cbProperty.SelectedItem as Property;
-
                 SentInIncident.Title = CloneOfIncident.Title;
-                //SentInIncident.Property = CloneOfIncident.Property;
                 SentInIncident.Description = CloneOfIncident.Description;
                 SentInIncident.IsActive = CloneOfIncident.IsActive;
                 SentInIncident.IncidentReportedDate = CloneOfIncident.IncidentReportedDate;

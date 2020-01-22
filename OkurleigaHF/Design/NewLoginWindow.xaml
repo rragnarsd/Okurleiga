@@ -35,6 +35,13 @@
                 <PasswordBox x:Name="PwPassword" materialDesign:HintAssist.Hint="Lykilorð" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10" FontSize="16"/>
             </StackPanel>
         </Grid>
-        <Button x:Name="BtnSignIn" VerticalAlignment="Bottom" Margin="100,0,100,85" Width="150" Content="Innskráning" Background="#FF1B5481" BorderBrush="#FF1B5481" Click="BtnSignIn_Click" IsDefault="True"/>
+        <Button Style="{StaticResource BtnButtons}"
+            x:Name="BtnSignIn" 
+            VerticalAlignment="Bottom" 
+            Margin="90,0,0,67" 
+            Width="170" Content="Innskráning"
+            Click="BtnSignIn_Click" 
+            IsDefault="True" Height="43"
+            />
     </Grid>
 </Window>

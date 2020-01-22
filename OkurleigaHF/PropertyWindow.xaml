@@ -7,32 +7,34 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     Title="Húsnæði"
-    Width="896.581"
-    Height="498.126"
+    Width="890.989"
+    Height="427.999"
     Loaded="Window_Loaded"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
 
     <Grid>
-        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
+        <Button Style="{StaticResource BtnButtons}"
             x:Name="BtnNewProp"
             Width="244"
-            Height="37"
+            Height="45"
             Margin="33,53,0,0"
             Click="BtnNewProp_Click"
             Content="Nýskrá leiguhúsnæði"/>
-        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
+        <Button Style="{StaticResource BtnButtons}"
             x:Name="BtnNewIncident"
             Width="244"
-            Height="37"
-            Margin="33,107,0,0"
+            Height="45"
+            Margin="286,53,0,0"
             Click="BtnNewIncident_Click"
-            Content="Atvikaskráning"/>
+            Content="Atvikaskráning" 
+            Background="White" 
+            Foreground="Black"/>
         <DataGrid 
             Width="818"
             Height="244"
-            Margin="40,178,0,0"
+            Margin="33,121,29.333,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutoGenerateColumns="False"

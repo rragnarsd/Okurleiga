@@ -17,7 +17,7 @@
         <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
             x:Name="BtnNewIncident"
             Width="244"
-            Height="37"
+            Height="45"
             Margin="33,53,0,0"
             Click="BtnNewIncident_Click"
             Content="Skrá nýtt atvik" />

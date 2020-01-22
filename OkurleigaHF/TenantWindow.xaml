@@ -14,13 +14,14 @@
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
+        <Button Style="{StaticResource BtnButtons}"
             x:Name="BtnNewTenant"
             Width="244"
-            Height="37"
+            Height="45"
             Margin="33,53,0,0"
             Click="BtnNewTenant_Click"
-            Content="Nýskrá leigjanda"/>
+            Content="Nýskrá leigjanda">
+        </Button>
         <DataGrid
             Grid.RowSpan="2"
             Height="244"

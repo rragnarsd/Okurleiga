@@ -15,7 +15,7 @@
     <Grid>
         <Image Source="Pictures/building.jpg" Stretch="Fill"/>
 
-        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="50" 
+        <Button Style="{StaticResource BtnButtons}"
             x:Name="BtnProperties"
             Width="213"
             Height="59"
@@ -24,7 +24,7 @@
             Margin="59,203,0,0"
             Click="BtnProperties_Click"
             Content="Húsnæði"/>
-        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="10"
+        <Button Style="{StaticResource BtnButtons}"
             x:Name="BtnTenants"
             Width="213"
             Height="59"

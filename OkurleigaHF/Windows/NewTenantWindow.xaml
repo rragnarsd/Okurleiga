@@ -70,9 +70,6 @@
                 SelectionOpacity="3"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding Phone, Converter={StaticResource ZeroToEmptyConverter}}">
-                <TextBox.Background>
-                    <ImageBrush/>
-                </TextBox.Background>
             </TextBox>
             <TextBox
                 x:Name="TxtEmail"
@@ -93,17 +90,18 @@
             Height="25"
             Margin="32,262,0,0"
             Kind="House" />
-        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
+        <Button Style="{StaticResource BtnButtons}"
             x:Name="btnBack"
-            Width="108"
-            Height="32"
+            Width="110"
+            Height="35"
             Margin="156,318,0,0"
             Click="BtnBack_Click"
-            Content="Til baka" />
-        <Button Style="{StaticResource BtnButtons}" materialDesign:ButtonAssist.CornerRadius="5"
+            Content="Til baka" 
+            Background="White" Foreground="Black"/>
+        <Button Style="{StaticResource BtnButtons}"
             x:Name="btnSave"
-            Width="108"
-            Height="32"
+            Width="110"
+            Height="35"
             Margin="286,318,0,0"
             Click="BtnSave_Click"
             Content="Vista" />

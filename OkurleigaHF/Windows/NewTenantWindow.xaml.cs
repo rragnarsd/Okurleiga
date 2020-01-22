@@ -33,7 +33,7 @@ namespace OkurleigaHF.Windows
             Properties = new ObservableCollection<Property>();
         }
 
-        
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             SharedContext.DBContext.Properties.Load();
@@ -66,11 +66,9 @@ namespace OkurleigaHF.Windows
             else
             {
                 SentInTenant.PropertyForRent = cbPropertyAddress.SelectedItem as Property;
-
                 SentInTenant.FullName = CloneOfTenant.FullName;
                 SentInTenant.Email = CloneOfTenant.Email;
                 SentInTenant.Phone = CloneOfTenant.Phone;
-                //SentInTenant.PropertyForRent = CloneOfTenant.PropertyForRent;
 
                 if (SentInTenant.Id == 0)
                 {
@@ -82,7 +80,7 @@ namespace OkurleigaHF.Windows
                 this.Close();
             }
 
-            
+
         }
     }
 }

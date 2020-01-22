@@ -7,9 +7,29 @@
         xmlns:local="clr-namespace:OkurleigaHF.Design"
         mc:Ignorable="d"
         Title="msg" Height="175.417" Width="575.876"
-        ResizeMode="NoResize" WindowStyle="None">
+        ResizeMode="NoResize" WindowStyle="None" Loaded="Window_Loaded">
     <Grid>
-        <Rectangle Height="68" Width="575"  VerticalAlignment="Bottom"  >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="ButtonLabel" HorizontalAlignment="Center"
+                   Margin="7">Ekkert valið</TextBlock>
+        <Button Grid.Row="1" 
+                Click="Show_Click" 
+                Margin="0,2,0,-0.667" Height="Auto">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1B5481"/>
+                    <GradientStop Color="#FF709AB0" Offset="1"/>
+                    <GradientStop Color="#FF3277A3" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            Textabox
+        </Button>
+
+        <!--<Rectangle Height="68" Width="575"  VerticalAlignment="Bottom"  >
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF1B5481"/>
@@ -18,7 +38,32 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Button Content="OKAY" Canvas.Left="214" Canvas.Top="-192" Width="148" FontFamily="Segoe UI" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="213,123,215,20.333" Background="White" Click="Button_Click" BorderBrush="#FFABABAB" Foreground="#DD000000"/>
-        <Label Content="MessageBox" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="212" Canvas.Top="-278" Margin="206,40,210,91.333"/>
+
+        <TextBlock Name="MessageBox" HorizontalAlignment="Center" FontSize="25" VerticalAlignment="Center" Canvas.Left="212" Canvas.Top="-278" Margin="182,45,177,96.333" Width="217" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.102"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.193"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>No button pressed
+        </TextBlock>
+        <Button 
+                x:Name="BtnShow"
+                Content="OKAY" 
+                Canvas.Left="214" 
+                Canvas.Top="-192" 
+                Width="148" 
+                FontFamily="Segoe UI" 
+                FontSize="14" 
+                FontWeight="Bold" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"  
+                Margin="216,123,212,20.333" 
+                Background="White" 
+                BorderBrush="#FFABABAB" 
+                Foreground="#DD000000" Click="BtnShow_Click"/>-->
+
     </Grid>
 </Window>
