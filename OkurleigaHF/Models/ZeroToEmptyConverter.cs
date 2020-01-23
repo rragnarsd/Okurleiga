@@ -18,8 +18,6 @@ namespace OkurleigaHF.Models
             {
                 return number.ToString();
             }
-
-
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

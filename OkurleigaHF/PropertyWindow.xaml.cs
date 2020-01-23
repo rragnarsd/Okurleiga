@@ -65,10 +65,5 @@ namespace OkurleigaHF
             SharedContext.DBContext.Properties.Remove(p);
             SharedContext.DBContext.SaveChanges();
         }
-
-        private void BtnNewProp_ColorChanged(object sender, RoutedPropertyChangedEventArgs<System.Windows.Media.Color> e)
-        {
-
-        }
     }
 }

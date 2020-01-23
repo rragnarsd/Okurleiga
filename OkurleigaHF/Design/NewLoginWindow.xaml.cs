@@ -25,11 +25,6 @@ namespace OkurleigaHF.Design
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void BtnSignIn_Click(object sender, RoutedEventArgs e)
         {
             if (TxtEmail.Text == "okurleiga@okurleiga.is" & PwPassword.Password == "12345")
@@ -40,7 +35,8 @@ namespace OkurleigaHF.Design
             }
             else
             {
-                MessageBox.Show("Vinsamlegast reyndu aftur");
+                MessageBoxCustom win = new MessageBoxCustom("Reyndu aftur");
+                win.ShowDialog();
             }
 
         }

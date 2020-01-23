@@ -6,13 +6,12 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:OkurleigaHF.Design"
         mc:Ignorable="d"
-        Loaded="Window_Loaded"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         WindowStyle="None"
         Height="500" Width="350"
         FocusManager.FocusedElement="{Binding ElementName=TxtEmail}">
-    <Grid>
+    <Grid Margin="0,-1,0,1">
         <Rectangle Height="280" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -38,7 +37,7 @@
         <Button Style="{StaticResource BtnButtons}"
             x:Name="BtnSignIn" 
             VerticalAlignment="Bottom" 
-            Margin="90,0,0,67" 
+            Margin="90,0,0,77" 
             Width="170" Content="Innskráning"
             Click="BtnSignIn_Click" 
             IsDefault="True" Height="43"

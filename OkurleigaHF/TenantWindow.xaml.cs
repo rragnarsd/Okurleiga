@@ -55,5 +55,6 @@ namespace OkurleigaHF
             SharedContext.DBContext.Tenants.Remove(t);
             SharedContext.DBContext.SaveChanges();
         }
+
     }
 }

@@ -20,21 +20,16 @@
         <materialDesign:NullableToVisibilityConverter x:Key="NullableToVisibilityConverter" />
     </Window.Resources>
     <Grid>
-        <StackPanel
-            Margin="2,61,-0.333,357.667"
-            HorizontalAlignment="Center"
-            Orientation="Vertical">
-            <TextBlock
-                Width="163"
-                Height="32"
-                Margin="-15,0,-7.333,0"
+        <TextBlock
+                Width="185"
+                Height="48"
+                Margin="0,57,130,345"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
-                FontSize="20"
+                FontSize="22"
                 FontWeight="bold"
                 Text="Nýskrá leigjanda"
                 TextWrapping="Wrap" />
-        </StackPanel>
         <materialDesign:PackIcon
             Width="25"
             Height="25"

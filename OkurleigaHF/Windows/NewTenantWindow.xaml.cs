@@ -1,4 +1,5 @@
-﻿using OkurleigaHF.EF;
+﻿using OkurleigaHF.Design;
+using OkurleigaHF.EF;
 using OkurleigaHF.Models;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
@@ -51,17 +52,28 @@ namespace OkurleigaHF.Windows
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
+            
+
             if (string.IsNullOrWhiteSpace(TxtName.Text))
             {
-                MessageBox.Show("Verður að skrifa nafn");
+                MessageBoxCustom win = new MessageBoxCustom("Nafn vantar");
+                win.ShowDialog();
+
             }
             else if (string.IsNullOrWhiteSpace(TxtPhoneNumber.Text))
             {
-                MessageBox.Show("Verður að skrifa símanúmer");
+                MessageBoxCustom win = new MessageBoxCustom("Símanúmer vantar");
+                win.ShowDialog();
             }
             else if (string.IsNullOrWhiteSpace(TxtEmail.Text))
             {
-                MessageBox.Show("Verður að skrifa netfang");
+                MessageBoxCustom win = new MessageBoxCustom("Netfang vantar");
+                win.ShowDialog();
+            }
+            else if (string.IsNullOrWhiteSpace(cbPropertyAddress.Text))
+            {
+                MessageBoxCustom win = new MessageBoxCustom("Leiguhúsnæði vantar");
+                win.ShowDialog();
             }
             else
             {

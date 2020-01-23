@@ -1,8 +1,11 @@
-﻿using OkurleigaHF.EF;
+﻿using OkurleigaHF.Design;
+using OkurleigaHF.EF;
 using OkurleigaHF.Models;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace OkurleigaHF.Windows
 {
@@ -73,23 +76,28 @@ namespace OkurleigaHF.Windows
         {
             if (string.IsNullOrWhiteSpace(TxtAddress.Text))
             {
-                MessageBox.Show("Verður að skrifa heimilisfang");
+                MessageBoxCustom win = new MessageBoxCustom("Heimilisfang vantar");
+                win.ShowDialog();
             }
             else if (string.IsNullOrWhiteSpace(cbZipCode.Text))
             {
-                MessageBox.Show("Verður að velja póstnúmer");
+                MessageBoxCustom win = new MessageBoxCustom("Póstnúmer vantar");
+                win.ShowDialog();
             }
             else if (string.IsNullOrWhiteSpace(TxtSize.Text))
             {
-                MessageBox.Show("Stærð á húsnæðinu?");
+                MessageBoxCustom win = new MessageBoxCustom("Stærð á húsnæði í m²?");
+                win.ShowDialog();
             }
             else if (string.IsNullOrWhiteSpace(cbBedrooms.Text))
             {
-                MessageBox.Show("Verður að velja svefnherbergi");
+                MessageBoxCustom win = new MessageBoxCustom("Herbergjafjöldi?");
+                win.ShowDialog();
             }
             else if (string.IsNullOrWhiteSpace(TxtRentCost.Text))
             {
-                MessageBox.Show("Til að halda áfram verður mánaðarleg greiðsla að koma fram!");
+                MessageBoxCustom win = new MessageBoxCustom("Leiguverð");
+                win.ShowDialog();
             }
             else
             {

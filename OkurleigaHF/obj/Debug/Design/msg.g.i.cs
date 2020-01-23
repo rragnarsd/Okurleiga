@@ -44,9 +44,9 @@ namespace OkurleigaHF.Design {
     public partial class msg : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 17 "..\..\..\Design\msg.xaml"
+        #line 33 "..\..\..\Design\msg.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock ButtonLabel;
+        internal System.Windows.Controls.Button BtnShow;
         
         #line default
         #line hidden
@@ -82,20 +82,10 @@ namespace OkurleigaHF.Design {
             switch (connectionId)
             {
             case 1:
+            this.BtnShow = ((System.Windows.Controls.Button)(target));
             
-            #line 10 "..\..\..\Design\msg.xaml"
-            ((OkurleigaHF.Design.msg)(target)).Loaded += new System.Windows.RoutedEventHandler(this.Window_Loaded);
-            
-            #line default
-            #line hidden
-            return;
-            case 2:
-            this.ButtonLabel = ((System.Windows.Controls.TextBlock)(target));
-            return;
-            case 3:
-            
-            #line 20 "..\..\..\Design\msg.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Show_Click);
+            #line 46 "..\..\..\Design\msg.xaml"
+            this.BtnShow.Click += new System.Windows.RoutedEventHandler(this.BtnShow_Click);
             
             #line default
             #line hidden

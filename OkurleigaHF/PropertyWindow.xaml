@@ -4,8 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:OkurleigaHF"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Húsnæði"
     Width="890.989"
     Height="427.999"
@@ -15,23 +15,25 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Button Style="{StaticResource BtnButtons}"
+        <Button
             x:Name="BtnNewProp"
             Width="244"
             Height="45"
             Margin="33,53,0,0"
             Click="BtnNewProp_Click"
-            Content="Nýskrá leiguhúsnæði"/>
-        <Button Style="{StaticResource BtnButtons}"
+            Content="Nýskrá leiguhúsnæði"
+            Style="{StaticResource BtnButtons}" />
+        <Button
             x:Name="BtnNewIncident"
             Width="244"
             Height="45"
             Margin="286,53,0,0"
+            Background="White"
             Click="BtnNewIncident_Click"
-            Content="Atvikaskráning" 
-            Background="White" 
-            Foreground="Black"/>
-        <DataGrid 
+            Content="Atvikaskráning"
+            Foreground="Black"
+            Style="{StaticResource BtnButtons}" />
+        <DataGrid
             Width="818"
             Height="244"
             Margin="33,121,29.333,0"

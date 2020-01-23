@@ -18,18 +18,13 @@
 
     <Grid>
         <TextBlock
-            Width="130"
-            Margin="0,62,154,362"
+            Width="138"
+            Margin="0,61,140,344"
             HorizontalAlignment="Right"
             VerticalAlignment="Center"
-            FontSize="20"
+            FontSize="22"
             FontWeight="bold"
-            Text="Nýskrá atvik" />
-        <StackPanel
-            Width="372"
-            Margin="31,30,0,38.667"
-            HorizontalAlignment="Left"
-            Orientation="Vertical" />
+            Text="Nýskrá atvik" Height="45" />
         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
             x:Name="TxtTitle"
             Height="46"

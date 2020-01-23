@@ -1,4 +1,5 @@
-﻿using OkurleigaHF.EF;
+﻿using OkurleigaHF.Design;
+using OkurleigaHF.EF;
 using OkurleigaHF.Models;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
@@ -55,19 +56,23 @@ namespace OkurleigaHF.Windows
         {
             if (string.IsNullOrWhiteSpace(TxtTitle.Text))
             {
-                MessageBox.Show("Verður að skrifa titill");
+                MessageBoxCustom win = new MessageBoxCustom("Titil vantar");
+                win.ShowDialog();
             }
             else if (string.IsNullOrWhiteSpace(cbProperty.Text))
             {
-                MessageBox.Show("Verður að velja húsnæði");
+                MessageBoxCustom win = new MessageBoxCustom("Heimilisfang");
+                win.ShowDialog();
             }
             else if (string.IsNullOrWhiteSpace(TxtDescription.Text))
             {
-                MessageBox.Show("Það vantar lýsingu á atvikinu");
+                MessageBoxCustom win = new MessageBoxCustom("Lýsing á atviki");
+                win.ShowDialog();
             }
             else if (string.IsNullOrWhiteSpace(cbPriority.Text))
             {
-                MessageBox.Show("Hversu mikilvægt er atvikið?");
+                MessageBoxCustom win = new MessageBoxCustom("Mikilvægi atviks");
+                win.ShowDialog();
             }
             else
             {
@@ -88,9 +93,6 @@ namespace OkurleigaHF.Windows
 
                 this.Close();
             }
-
-
-
         }
     }
 }
