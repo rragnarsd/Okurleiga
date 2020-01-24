@@ -7,7 +7,7 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Húsnæði"
-    Width="890.989"
+    Width="859.726"
     Height="427.999"
     Loaded="Window_Loaded"
     ResizeMode="NoResize"
@@ -34,10 +34,8 @@
             Foreground="Black"
             Style="{StaticResource BtnButtons}" />
         <DataGrid
-            Width="818"
             Height="244"
-            Margin="33,121,29.333,0"
-            HorizontalAlignment="Left"
+            Margin="33,121,33.667,0"
             VerticalAlignment="Top"
             AutoGenerateColumns="False"
             CanUserAddRows="False"
@@ -58,17 +56,17 @@
                             <StackPanel Orientation="Horizontal">
                                 <Button
                                     x:Name="BtnEdit"
+                                    Content="{materialDesign:PackIcon EditOutline}"
                                     Background="Transparent"
                                     BorderThickness="0"
                                     Click="BtnEdit_Click"
-                                    Content="Breyta"
                                     Foreground="#FF0B13AD" />
                                 <Button
                                     x:Name="BtnDelete"
+                                    Content="{materialDesign:PackIcon TrashCanOutline}"
                                     Background="Transparent"
                                     BorderThickness="0"
                                     Click="BtnDelete_Click"
-                                    Content="Eyða"
                                     Foreground="#FFFF1313" />
                             </StackPanel>
                         </DataTemplate>

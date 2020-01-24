@@ -44,17 +44,17 @@
                             <StackPanel Orientation="Horizontal">
                                 <Button
                                     x:Name="BtnEditIncident"
+                                    Content="{materialDesign:PackIcon EditOutline}"
                                     Background="Transparent"
                                     BorderThickness="0"
                                     Click="BtnEditIncident_Click"
-                                    Content="Edit"
                                     Foreground="#FF0B13AD" />
                                 <Button
                                     x:Name="BtnDeleteIncident"
+                                    Content="{materialDesign:PackIcon TrashCanOutline}"
                                     Background="Transparent"
                                     BorderThickness="0"
                                     Click="BtnDeleteIncident_Click"
-                                    Content="Delete"
                                     Foreground="#FFFF1313" />
                             </StackPanel>
                         </DataTemplate>

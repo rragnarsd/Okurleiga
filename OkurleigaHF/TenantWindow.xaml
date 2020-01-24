@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     Title="Leigjendur"
-    Width="890.989"
+    Width="859.726"
     Height="427.999"
     Loaded="Window_Loaded"
     mc:Ignorable="d"
@@ -42,8 +42,20 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Button x:Name="BtnEdit" Content="Breyta" Background="Transparent" Foreground="#FF0B13AD" BorderThickness="0" Click="BtnEdit_Click"/>
-                                <Button x:Name="BtnDelete" Content="Eyða" Background="Transparent" Foreground="#FFFF1313" BorderThickness="0" Click="BtnDelete_Click"/>
+                                <Button 
+                                      x:Name="BtnEdit"
+                                      Content="{materialDesign:PackIcon EditOutline}"
+                                      Background="Transparent"
+                                      Foreground="#FF0B13AD"
+                                      BorderThickness="0"
+                                      Click="BtnEdit_Click"/>
+                                <Button 
+                                      x:Name="BtnDelete"
+                                      Content="{materialDesign:PackIcon TrashCanOutline}"
+                                      Background="Transparent"
+                                      Foreground="#FFFF1313"
+                                      BorderThickness="0"
+                                      Click="BtnDelete_Click"/>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
