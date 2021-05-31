@@ -9,6 +9,9 @@ The system should keep track of rental apartments, tenants and incident records.
 
 Live version: 
 
+https://user-images.githubusercontent.com/44742460/120242864-81c34980-c255-11eb-9fb9-b117aa97040f.mp4
+
+
 
 
 
